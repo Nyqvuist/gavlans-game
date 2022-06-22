@@ -1,6 +1,11 @@
-const app = require("express");
-const http = require('http').Server(app);
-const io = require('socket.io', {cors:{origin:"*"}})(http);
+const express = require('express');
+const app = express();
+const http = require('http');
+const io = require('socket.io')(3001, {
+    cors: {
+        origin: ['http://localhost:3000']
+    }
+})
 const mongoose = require("mongoose");
 const Player = require("./schemas/Player")
 
@@ -11,7 +16,12 @@ mongoose.connect("mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/csg
     
 });
 
+app.get('/', (req, res) => {
+    res.send('<h1>Test<h1>');
 
-app.listen(3001, () => {
-    console.log("Server is running.")
+})
+
+io.on('connection', (socket) => {
+    console.log('a user connected')
 });
+
