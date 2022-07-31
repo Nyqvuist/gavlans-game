@@ -9,8 +9,9 @@ const io = require('socket.io')(3001, {
 })
 const mongoose = require("mongoose");
 const Player = require("./schemas/Player")
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/csgo?retryWrites=true&w=majority", () => {
+mongoose.connect(process.env.MONGO, () => {
     console.log("Database is connected.")
     
 });
