@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
-const Player = require("./Models/Player")
 require('dotenv').config()
 
+
+const quesRoute = require("./routes/questions");
+app.use("/questions", quesRoute);
 
 mongoose.connect(process.env.MONGO, () => {
     console.log("Database is connected.")
