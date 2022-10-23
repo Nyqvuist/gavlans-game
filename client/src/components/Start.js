@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/main.css';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
@@ -9,14 +9,18 @@ import Singleplayer from '../components/Singleplayer';
 import Multiplayer from '../components/Multiplayer';
 import { Link } from '@mui/material';
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 
-export default function Start(props) {
-
+export default function Start() {
+    
     const location = useLocation()
-    const {myState} = location.state
+    console.log(location.state)
 
+    
   return (
+    
     <Grid container
     spacing={2}
     justifyContent="center"
@@ -66,10 +70,10 @@ export default function Start(props) {
                     justifyContent="center"
                     alignItems="center">
                         <Grid item>
-                            <Singleplayer category={myState}/>
+                            <Singleplayer category={location.state}/>
                         </Grid>
                         <Grid item>
-                            <Multiplayer category={myState}/>
+                            <Multiplayer category={location.state}/>
                         </Grid>
                     </Grid>
                 </Grid>

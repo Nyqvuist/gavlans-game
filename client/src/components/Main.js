@@ -4,8 +4,6 @@ import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
 import test from '../assets/unnamed.png';
 import { Button } from '@mui/material';
-import { Link } from '@mui/material';
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 
@@ -43,12 +41,12 @@ export default function Main() {
                   </Button>
                 </Grid>
                 <Grid item>
-                  <NavLink to='/start' state={{ myState: 'csgo'}}>
+                  <NavLink to='/start' state="csgo">
                     <img className='img' src={test} alt='csgo' width='200' height='200'/>  
                   </NavLink>
                 </Grid>
                 <Grid item>
-                  <NavLink to='/start' state={{ myState: 'league'}}>
+                  <NavLink to='/start' state="league">
                     <img className='img' src={test} alt='league' width='200' height='200'/>  
                   </NavLink>
                 </Grid>

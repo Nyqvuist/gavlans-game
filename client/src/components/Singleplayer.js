@@ -3,10 +3,15 @@ import { Box, Button } from '@mui/material';
 import { Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
-export default function Singleplayer(props) {
-    console.log(props.category)
+export default function Singleplayer() {
+
+    const location = useLocation()
+    console.log(location.state)
+    
   return (
     <Box sx={{width:360, height:120, backgroundColor:'white'}}>
         <Grid container
@@ -41,9 +46,11 @@ export default function Singleplayer(props) {
                             <PersonIcon/>
                         </Grid>
                         <Grid item sx={{pt:3}}>
-                            <Button variant='contained' sx={{width:90, height:30}}>
-                                Play!
-                            </Button>
+                            <NavLink to="/play" state={location.state}>
+                                <Button variant='contained' sx={{width:90, height:30}}>
+                                    Play!
+                                </Button>
+                            </NavLink>
                         </Grid>
                     </Grid>
                 </Grid>
