@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../styles/main.css';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
@@ -9,8 +9,6 @@ import Singleplayer from '../components/Singleplayer';
 import Multiplayer from '../components/Multiplayer';
 import { Link } from '@mui/material';
 import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
 
 
 export default function Start() {
@@ -18,7 +16,6 @@ export default function Start() {
     const location = useLocation()
     console.log(location.state)
 
-    
   return (
     
     <Grid container
@@ -56,7 +53,7 @@ export default function Start() {
                         </Grid>
                         <Grid item>
                             <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold'}}>
-                                Username: <TextField id="outlined-basic" label="Name" variant="outlined" required={true} size="small" /> 
+                                Username: <TextField id="outlined-basic" onChange={(event) => sessionStorage.setItem("autosave", event.target.value)} label="Name" variant="outlined" required={true} size="small" /> 
                             </Typography>
                         </Grid>
                     </Grid>

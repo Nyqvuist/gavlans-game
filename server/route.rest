@@ -1,1 +1,1 @@
-GET http://localhost:3000/csgo
+GET http://localhost:3001/csgo
