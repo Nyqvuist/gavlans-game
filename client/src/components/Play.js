@@ -76,7 +76,7 @@ export default function Play() {
               alignItems="center"
               >
                 <Grid item>
-                  <Typography variant="h2" sx={{mt:20, pb:2, ml:118, color: 'green'}}>{index + 1}/5</Typography>
+                  <Typography variant="h2" sx={{mt:20, pb:2, color: 'green'}}>{index + 1}/5</Typography>
                 </Grid>
                 
               <Grid container
