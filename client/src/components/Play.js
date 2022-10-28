@@ -42,11 +42,12 @@ export default function Play() {
       if(shuffle === answer){
         setIndex(index + 1)
         setScore(score + 100)
-        if(index === 4){
-          setShowScore(true);
-        }
+      } else {
+        setIndex(index + 1)
       }
-      
+      if(index === 4){
+        setShowScore(true)
+      }
     };
 
     
@@ -56,10 +57,6 @@ export default function Play() {
         <h1>hello</h1>
       )
     }
-    console.log(showScore)
-    console.log("question length: ", question.length)
-    console.log("index: ", index)
-
    return (
       <>
           {showScore ? (
@@ -68,49 +65,86 @@ export default function Play() {
           justifyContent="center"
           alignItems="center">
             <Grid item>
-              <Typography variant="h1" sx={{color:'#b71c1c'}}>{score}</Typography>
+              <Typography variant="h1" sx={{color:'#b71c1c', textAlign: 'center'}}>{score}</Typography>
             </Grid>
-          </Grid>) : (<Grid container
-              spacing={2}
-              justifyContent="center"
-              alignItems="center"
-              >
+          </Grid>) : (
+            <Grid container
+            spacing={2}
+            justifyContent="center"
+            alignItems="center">
                 <Grid item>
-                  <Typography variant="h2" sx={{mt:20, pb:2, color: 'green'}}>{index + 1}/5</Typography>
+                  <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color:'red'}}> {index + 1}/5 </Typography>
                 </Grid>
-                
-              <Grid container
-              spacing={2}
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-              sx={{backgroundColor: '#c7e293', mb:20, mx:50}}>
-                <Grid item sx={{pt:5}}>
-                  <Typography variant ='h4'>{ques}</Typography>
-                </Grid>
-                <Grid item sx={{pb:20}}>
-                  <Typography variant='subtitle1'>{name}</Typography>
-                </Grid>
-                <Grid item>
-                <Grid container 
-                rowSpacing={1}
+                <Grid container
+                direction={'column'}
+                spacing={1}
                 justifyContent="center"
-                alignItems={"center"}
-                columnSpacing={{xs:1, sm:2, md:3}}
-                sx={{mb:10, ml:30}}>
-                  {shuffles?.map((shuffle) => (
-                    <Grid item key={shuffle} xs={6}>
-                      <Button
-                      variant='contained'
-                      sx={{backgroundColor: '#1783EF'}}
-                        onClick={() => jobDone(shuffle)}
-                      >{shuffle}</Button>
+                alignItems="center"
+                >
+                    <Grid container
+                    spacing={1}
+                    direction={'column'}
+                    justifyContent="center"
+                    alignItems="center">
+                        <Grid item>
+                            <Grid container
+                            direction='column'
+                            spacing={2}
+                            justifyContent="center"
+                            alignItems="center">
+                                <Grid item>
+                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red'}}>
+                                        {ques} 
+                                </Typography>
+ 
+                                </Grid>
+                                <Grid item>
+                                    <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red'}}>
+                                        {name} 
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item>
+                            <Grid container
+                            rowSpacing={1}
+                            alignItems="center"
+                            justifyContent="center"
+                            sx={{ml:5, pt:5}}>
+                                <Grid item xs={6}>
+                                <Button
+                                variant='contained'
+                                sx={{backgroundColor: '#1783EF'}}
+                                  onClick={() => jobDone(shuffles[0])}
+                                >{shuffles?.[0]}</Button>  
+                                </Grid>
+                                <Grid item xs={6}>
+                                <Button
+                                variant='contained'
+                                sx={{backgroundColor: '#1783EF'}}
+                                  onClick={() => jobDone(shuffles[1])}
+                                >{shuffles?.[1]}</Button>
+                                </Grid>
+                                <Grid item xs={6}>
+                                <Button
+                                variant='contained'
+                                sx={{backgroundColor: '#1783EF'}}
+                                  onClick={() => jobDone(shuffles[2])}
+                                >{shuffles?.[2]}</Button>
+                                </Grid>
+                                <Grid item xs={6}>
+                                <Button
+                                variant='contained'
+                                sx={{backgroundColor: '#1783EF'}}
+                                  onClick={() => jobDone(shuffles[3])}
+                                >{shuffles?.[3]}</Button>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                  ))}
                 </Grid>
-                </Grid>
-              </Grid>
-            </Grid>)} 
+            </Grid>
+          )} 
       </> 
       )
     }

@@ -15,14 +15,14 @@ export default function Main() {
     justifyContent="center"
     alignItems="center">
         <Grid item>
-            <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color:'red'}}> LOGO </Typography>
+            <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color:'red'}}> LOGO </Typography>
         </Grid>
         <Grid container
         spacing={2}
         direction='column'
         justifyContent="center"
         alignItems="center"
-        sx={{backgroundColor: '#c7e293', mx: 30}}>
+        >
             <Grid item>
                 <Typography variant ='h2'>Esport Guesser</Typography>
             </Grid>
@@ -63,7 +63,7 @@ export default function Main() {
               direction="row"
               justifyContent="center"
               alignItems="center"
-              sx={{mb:20}}>
+              >
                 <Grid item>
                   <Button className='button'>
                     <img src={test} alt='test' width='200' height='200'/>
@@ -91,7 +91,7 @@ export default function Main() {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          sx={{mx:30, mb:30}}>
+          sx={{mx:30}}>
             <Grid item>
               <Typography variant='subtitle2' sx={{color:'red'}}>LOGO</Typography>
             </Grid>
