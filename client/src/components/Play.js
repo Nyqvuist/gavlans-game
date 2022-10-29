@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { Grid, Typography, Button } from '@mui/material';
+var Timer = require("easytimer.js").Timer;
+var timerInstance = new Timer();
 
 
 export default function Play() {
@@ -25,6 +27,7 @@ export default function Play() {
             
         }
         fetchData();
+        timerInstance.start({precision: 'seconds'})
         
     }, [])
 
@@ -37,11 +40,16 @@ export default function Play() {
     let name = question[index]?.name
     choices?.push(question[index].answer)
     let shuffles = choices?.sort(() => 0.5 - Math.random())
-    
+
     const jobDone = (shuffle) => {
       if(shuffle === answer){
+        timerInstance.pause()
+        const points = 100
+        let time = timerInstance.getTimeValues().seconds
+        setScore(score + (Math.floor(points / time)))
+        timerInstance.reset()
         setIndex(index + 1)
-        setScore(score + 100)
+        timerInstance.start({precision:'seconds'})
       } else {
         setIndex(index + 1)
       }
