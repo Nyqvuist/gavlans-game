@@ -3,14 +3,25 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { Grid, Typography, Button } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
 var Timer = require("easytimer.js").Timer;
 var timerInstance = new Timer();
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function Play() {
 
     const location = useLocation()
 
+    const [open, setOpen] = useState(false)
     const [question, setQuestion] = useState([])
     const [index, setIndex] = useState(0)
     const [isBusy, setIsBusy] = useState(true)
@@ -29,7 +40,7 @@ export default function Play() {
         fetchData();
         timerInstance.start({precision: 'seconds'})
         
-    }, [])
+    }, [location.state])
 
 
     let array = question[index]?.choices?.map(choice => choice)
@@ -55,27 +66,40 @@ export default function Play() {
       }
       if(index === 4){
         setShowScore(true)
+        setOpen(true)
       }
+    };
+
+    const handleClose = () => {
+      setOpen(false);
+      window.location.reload(false)
     };
 
     
 
     if(isBusy){
       return (
-        <h1>hello</h1>
+        <CircularProgress />
       )
     }
    return (
       <>
           {showScore ? (
-          <Grid container
-          spacing={2}
-          justifyContent="center"
-          alignItems="center">
-            <Grid item>
-              <Typography variant="h1" sx={{color:'#b71c1c', textAlign: 'center'}}>{score}</Typography>
-            </Grid>
-          </Grid>) : (
+          <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-describedby="alert-dialog-slide-description"
+          >
+          <DialogTitle>{"Holy Moly You Suck"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              {score}
+            </DialogContentText>
+          </DialogContent>
+          </Dialog>
+          ) : (
             <Grid container
             spacing={2}
             justifyContent="center"
