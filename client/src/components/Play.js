@@ -4,18 +4,11 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { Grid, Typography, Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Slide from '@mui/material/Slide';
+import Score from '../components/Score';
+import ProgressBar from "../components/progressTimer";
 
 var Timer = require("easytimer.js").Timer;
 var timerInstance = new Timer();
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 export default function Play() {
 
@@ -27,6 +20,11 @@ export default function Play() {
     const [isBusy, setIsBusy] = useState(true)
     const [score, setScore] = useState(0)
     const [showScore, setShowScore] = useState(false)
+    const [progress, setProgress] = useState(0)
+    const [name, setName] = useState('')
+    const [answer, setAnswer] = useState('')
+    const [ques, setQues] = useState('')
+    const [shuffles, setShuffles] = useState([])
 
     useEffect(() => {
       setIsBusy(true)
@@ -35,47 +33,83 @@ export default function Play() {
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
-            
         }
         fetchData();
-        timerInstance.start({precision: 'seconds'})
-        
+        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
     }, [location.state])
 
+    useEffect(() => {
+      if(question.length > 0) {
+        shuffleArray();
+      }
+    },[isBusy])
 
-    let array = question[index]?.choices?.map(choice => choice)
-    let shuffled = array?.sort(() => 0.5 - Math.random());
-    let choices = shuffled?.slice(0,3)
-    let answer = question[index]?.answer
-    let ques = question[index]?.question
-    let name = question[index]?.name
-    choices?.push(question[index].answer)
-    let shuffles = choices?.sort(() => 0.5 - Math.random())
+    // Rework timer
+
+    timerInstance.addEventListener('secondsUpdated', function(e) {
+      setProgress(timerInstance.getTimeValues().seconds + 1)
+    })
+
+    timerInstance.addEventListener('targetAchieved', function(e) {
+      if(index < 4) {
+        timerInstance.stop()
+        setProgress(1)
+        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
+        setIndex(index + 1)
+        shuffleArray();
+      } else {
+        timerInstance.stop()
+        setShowScore(true)
+        setOpen(true)
+      }
+      
+    })
+
+    const shuffleArray = () => {
+      let array = question[index]?.choices?.map(choice => choice)
+      let shuffled = array?.sort(() => 0.5 - Math.random());
+      let choices = shuffled?.slice(0,3)
+      let answer = question[index]?.answer
+      let ques = question[index]?.question
+      let name = question[index]?.name
+      choices?.push(question[index].answer)
+      let shuffles = choices?.sort(() => 0.5 - Math.random())
+      setName(name)
+      setQues(ques)
+      setAnswer(answer)
+      setShuffles(shuffles)
+    }
+      
 
     const jobDone = (shuffle) => {
       if(shuffle === answer){
         timerInstance.pause()
         const points = 100
         let time = timerInstance.getTimeValues().seconds
-        setScore(score + (Math.floor(points / time)))
-        timerInstance.reset()
+        if(time === 0){
+          setScore(score + 150)
+        } else {
+          setScore(score + (Math.floor(points / time)))
+        }
+        timerInstance.stop()
+        setProgress(1)
         setIndex(index + 1)
-        timerInstance.start({precision:'seconds'})
+        shuffleArray();
+        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
       } else {
+        timerInstance.stop()
+        setProgress(1)
         setIndex(index + 1)
+        shuffleArray();
+        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
       }
       if(index === 4){
+        timerInstance.stop()
         setShowScore(true)
         setOpen(true)
       }
     };
 
-    const handleClose = () => {
-      setOpen(false);
-      window.location.reload(false)
-    };
-
-    
 
     if(isBusy){
       return (
@@ -85,27 +119,14 @@ export default function Play() {
    return (
       <>
           {showScore ? (
-          <Dialog
-          open={open}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={handleClose}
-          aria-describedby="alert-dialog-slide-description"
-          >
-          <DialogTitle>{"Holy Moly You Suck"}</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              {score}
-            </DialogContentText>
-          </DialogContent>
-          </Dialog>
+            <Score score={score} open={open} setOpen={setOpen}/>
           ) : (
             <Grid container
             spacing={2}
             justifyContent="center"
             alignItems="center">
-                <Grid item>
-                  <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color:'red'}}> {index + 1}/5 </Typography>
+                <Grid item sx={{mt:30, width:125, height:125}}>
+                  <ProgressBar progress={progress} index={index}/>
                 </Grid>
                 <Grid container
                 direction={'column'}
@@ -125,7 +146,7 @@ export default function Play() {
                             justifyContent="center"
                             alignItems="center">
                                 <Grid item>
-                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red'}}>
+                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red', mt: 10}}>
                                         {ques} 
                                 </Typography>
  
