@@ -23,7 +23,7 @@ export default function Start() {
     justifyContent="center"
     alignItems="center">
         <Grid item>
-            <Link href="/">
+            <Link href="/" style={{textDecoration: 'none'}}>
                 <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color:'red'}}> LOGO </Typography>
             </Link>   
         </Grid>
