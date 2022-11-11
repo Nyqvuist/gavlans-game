@@ -15,7 +15,7 @@ export default function Main() {
     justifyContent="center"
     alignItems="center">
         <Grid item>
-            <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color:'red'}}> LOGO </Typography>
+            <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color:'#D9DCD6'}}> LOGO </Typography>
         </Grid>
         <Grid container
         spacing={2}
@@ -24,10 +24,10 @@ export default function Main() {
         alignItems="center"
         >
             <Grid item>
-                <Typography variant ='h2'>Esport Guesser</Typography>
+                <Typography variant ='h2' sx={{color:'#D9DCD6', mt: 5}}>Esport Guesser</Typography>
             </Grid>
             <Grid item>
-                <Typography variant='subtitle1' sx={{pb:10}}>Play Trivia games from the biggest collections</Typography>
+                <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24}}>Play trivia games from the biggest collections</Typography>
             </Grid>
             <Grid item>
               <Grid container
@@ -36,24 +36,20 @@ export default function Main() {
               justifyContent="center"
               alignItems="center">
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="csgo">
-                    <img className='img' src={test} alt='csgo' width='200' height='200'/>  
+                    <img className='img' src={test} alt='csgo' width='100' height='100'/>  
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="league">
-                    <img className='img' src={test} alt='league' width='200' height='200'/>  
+                    <img className='img' src={test} alt='league' width='100' height='100'/>  
                   </NavLink>
                 </Grid>
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
               </Grid>
             </Grid>
@@ -65,24 +61,16 @@ export default function Main() {
               alignItems="center"
               >
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
                 <Grid item>
-                  <Button className='button'>
-                    <img src={test} alt='test' width='200' height='200'/>
-                  </Button>
+                  <img src={test} alt='test' width='100' height='100'/>
                 </Grid>
               </Grid>
             </Grid>
@@ -91,7 +79,7 @@ export default function Main() {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          sx={{mx:30}}>
+          sx={{mx:30, mt: 10}}>
             <Grid item>
               <Typography variant='subtitle2' sx={{color:'red'}}>LOGO</Typography>
             </Grid>

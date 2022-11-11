@@ -7,6 +7,7 @@ import Slide from '@mui/material/Slide';
 import { Button, DialogActions, Divider, Typography } from '@mui/material';
 import { useState } from 'react';
 import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
+import { NavLink } from 'react-router-dom';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -39,7 +40,7 @@ const badArray = [
   'What do you think about trying something new?',
 ]
 
-export default function Score({score, open, setOpen}) {
+export default function Score({score, open, setOpen, game, array}) {
 
   const [line, setLine] = useState('')
 
@@ -58,7 +59,6 @@ export default function Score({score, open, setOpen}) {
 
   const handleClose = () => {
     setOpen(false);
-    window.location.reload(false)
   };
 
   const checkScore = (score) => {
@@ -70,6 +70,7 @@ export default function Score({score, open, setOpen}) {
       setLine(getRandomItem(badArray))
     } 
   }
+  console.log(game, array)
 
   return (
     <Dialog
@@ -94,7 +95,9 @@ export default function Score({score, open, setOpen}) {
             </DialogContentText>
           </DialogContent>
           <DialogActions sx={{justifyContent: 'center'}}>
-            <Button variant="contained"  color='success' endIcon={<KeyboardArrowRightSharpIcon/>}  disableElevation sx={{textTransform: 'none'}}>Next</Button>
+            <NavLink to='/results' state={{game: [game], array: [array], score: [score]}} style={{textDecoration: 'none'}}>
+              <Button variant="contained"  color='success' endIcon={<KeyboardArrowRightSharpIcon/>}  disableElevation sx={{textTransform: 'none'}}>Next</Button>
+            </NavLink>
           </DialogActions>
     </Dialog>
   )

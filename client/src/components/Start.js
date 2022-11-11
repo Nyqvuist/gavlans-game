@@ -1,10 +1,7 @@
 import React from 'react'
 import '../styles/main.css';
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { Typography } from '@mui/material';
-import { Avatar } from '@mui/material';
-import test from "../assets/unnamed.png";
-import { TextField } from '@mui/material';
 import Singleplayer from '../components/Singleplayer';
 import Multiplayer from '../components/Multiplayer';
 import { Link } from '@mui/material';
@@ -24,7 +21,7 @@ export default function Start() {
     alignItems="center">
         <Grid item>
             <Link href="/" style={{textDecoration: 'none'}}>
-                <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color:'red'}}> LOGO </Typography>
+                <Typography variant='h3' sx={{fontWeight:'bold', mt:30, pb:2, color: "#D9DCD6"}}> LOGO </Typography>
             </Link>   
         </Grid>
         <Grid container
@@ -33,7 +30,7 @@ export default function Start() {
         direction='column'
         justifyContent="center"
         alignItems="center"
-        sx={{backgroundColor: '#c7e293', mx: 40}}>
+        sx={{mx: 20}}>
             <Grid container
             className="inner-grid-row"
             spacing={2}
@@ -44,20 +41,22 @@ export default function Start() {
                 <Grid item>
                     <Grid container
                     direction='column'
-                    spacing={6}
+                    spacing={1}
                     className='first-column'
                     justifyContent="center"
                     alignItems="center">
                         <Grid item>
-                            <Avatar alt="test" src={test} sx={{width:160, height:160}}/>
+                            <Typography variant='h2'>Rules</Typography>
                         </Grid>
                         <Grid item>
-                            <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold'}}>
-                                Username: <TextField id="outlined-basic" onChange={(event) => sessionStorage.setItem("autosave", event.target.value)} label="Name" variant="outlined" required={true} size="small" /> 
-                            </Typography>
+                            <Box sx={{backgroundColor: 'gray', opacity: 0.75, px: 3,py: 3}}>
+                                <Typography variant='h5'>• You will have 10 seconds to answer each question.</Typography>
+                                <Typography variant='h5'>• The faster you answer the more points you will get.</Typography>
+                                <Typography variant='h5'>• You will not know which questions you get wrong.</Typography>
+                                <Typography variant='h5'>• Dont suck.</Typography>
+                            </Box>
                         </Grid>
                     </Grid>
-
                 </Grid>
                 <Grid item>
                     <Grid container

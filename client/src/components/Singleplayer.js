@@ -10,10 +10,9 @@ import { useLocation } from 'react-router-dom';
 export default function Singleplayer() {
 
     const location = useLocation()
-    console.log(location.state)
     
   return (
-    <Box sx={{width:360, height:120, backgroundColor:'white'}}>
+    <Box sx={{width:360, height:120, backgroundColor:'grey'}}>
         <Grid container
             className="inner-grid-row"
             spacing={2}

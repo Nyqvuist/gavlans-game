@@ -6,11 +6,37 @@ import { Grid, Typography, Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import Score from '../components/Score';
 import ProgressBar from "../components/progressTimer";
+import { useTimer } from 'use-timer';
 
-var Timer = require("easytimer.js").Timer;
-var timerInstance = new Timer();
+
+const trackArray = []
 
 export default function Play() {
+
+  const { time, start, pause, reset } = useTimer({
+    endTime: 10,
+    onTimeOver: () => {
+      if(done){
+        if(index < (question.length - 1)) {
+          reset();
+          setIndex(index + 1)
+          createObj(10);
+          start();
+          shuffleArray();
+        } else {
+          pause();
+          createObj(10);
+          setDone(false)
+          setShowScore(true)
+          setOpen(true)
+        }
+      }
+    },
+    onTimeUpdate: (time) => {
+      setProgress(time)
+    },
+  });
+
 
     const location = useLocation()
 
@@ -25,6 +51,8 @@ export default function Play() {
     const [answer, setAnswer] = useState('')
     const [ques, setQues] = useState('')
     const [shuffles, setShuffles] = useState([])
+    const [done, setDone] = useState(true)
+
 
     useEffect(() => {
       setIsBusy(true)
@@ -35,7 +63,7 @@ export default function Play() {
             setIsBusy(false)
         }
         fetchData();
-        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
+        start();
     }, [location.state])
 
     useEffect(() => {
@@ -44,26 +72,10 @@ export default function Play() {
       }
     },[isBusy])
 
-    // Rework timer
-
-    timerInstance.addEventListener('secondsUpdated', function(e) {
-      setProgress(timerInstance.getTimeValues().seconds + 1)
-    })
-
-    timerInstance.addEventListener('targetAchieved', function(e) {
-      if(index < 4) {
-        timerInstance.stop()
-        setProgress(1)
-        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
-        setIndex(index + 1)
-        shuffleArray();
-      } else {
-        timerInstance.stop()
-        setShowScore(true)
-        setOpen(true)
-      }
-      
-    })
+    const createObj = (time) => {
+      let obj = {Time: time, Index: index + 1}
+      trackArray.push(obj)
+    };
 
     const shuffleArray = () => {
       let array = question[index]?.choices?.map(choice => choice)
@@ -80,37 +92,38 @@ export default function Play() {
       setShuffles(shuffles)
     }
       
-
     const jobDone = (shuffle) => {
       if(shuffle === answer){
-        timerInstance.pause()
+        pause();
         const points = 100
-        let time = timerInstance.getTimeValues().seconds
         if(time === 0){
           setScore(score + 150)
         } else {
           setScore(score + (Math.floor(points / time)))
         }
-        timerInstance.stop()
-        setProgress(1)
+        let obj = {Time: time, Index: index + 1}
+        trackArray.push(obj)
+        reset();
         setIndex(index + 1)
         shuffleArray();
-        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
-      } else {
-        timerInstance.stop()
-        setProgress(1)
+        start();
+      } else if (shuffle !== answer){
+        pause();
+        let obj = {Time: time, Index: index + 1}
+        trackArray.push(obj)
+        reset();
         setIndex(index + 1)
         shuffleArray();
-        timerInstance.start({precision: 'seconds', startValues: {seconds: 0}, target:{seconds: 10}})
+        start();
       }
-      if(index === 4){
-        timerInstance.stop()
+      if(index === (question.length - 1)){
+        pause();
+        setDone(false)
         setShowScore(true)
         setOpen(true)
       }
     };
-
-
+      
     if(isBusy){
       return (
         <CircularProgress />
@@ -119,13 +132,17 @@ export default function Play() {
    return (
       <>
           {showScore ? (
-            <Score score={score} open={open} setOpen={setOpen}/>
+            <Score score={score} open={open} setOpen={setOpen} game={location.state} array={trackArray}/>
           ) : (
             <Grid container
             spacing={2}
             justifyContent="center"
-            alignItems="center">
-                <Grid item sx={{mt:30, width:125, height:125}}>
+            alignItems="center"
+            direction={"column"}>
+              <Grid item>
+                <Typography variant="h3" sx={{mt:15, fontWeight: 'bold', textTransform: 'uppercase', color: 'green'}}>{location.state}</Typography>
+              </Grid>
+                <Grid item sx={{width:125, height:125, mt: 8}}>
                   <ProgressBar progress={progress} index={index}/>
                 </Grid>
                 <Grid container
@@ -146,13 +163,13 @@ export default function Play() {
                             justifyContent="center"
                             alignItems="center">
                                 <Grid item>
-                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red', mt: 10}}>
+                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'green', mt: 8, fontSize: 32}}>
                                         {ques} 
                                 </Typography>
  
                                 </Grid>
                                 <Grid item>
-                                    <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'red'}}>
+                                    <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'green', mb: 4}}>
                                         {name} 
                                     </Typography>
                                 </Grid>
@@ -160,38 +177,58 @@ export default function Play() {
                         </Grid>
                         <Grid item>
                             <Grid container
-                            rowSpacing={1}
+                            direction="row"
+                            rowSpacing={6}
                             alignItems="center"
-                            justifyContent="center"
-                            sx={{ml:5, pt:5}}>
-                                <Grid item xs={6}>
-                                <Button
-                                variant='contained'
-                                sx={{backgroundColor: '#1783EF'}}
-                                  onClick={() => jobDone(shuffles[0])}
-                                >{shuffles?.[0]}</Button>  
+                            justifyContent="space-evenly"
+                            >
+                              <Grid item>
+                                <Grid container
+                                direction="column"
+                                alignItems={"center"}
+                                justifyContent="space-evenly"
+                                spacing={4}
+                                >
+                                  <Grid item>
+                                    <Button
+                                    variant='contained'
+                                    sx={{backgroundColor: '#1783EF', fontSize:13, height: 50, width:260}}
+                                      onClick={() => jobDone(shuffles[0])}
+                                    >{shuffles?.[0]}</Button>
+                                  </Grid>
+                                  <Grid item>
+                                    <Button
+                                      variant='contained'
+                                      sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                        onClick={() => jobDone(shuffles[1])}
+                                      >{shuffles?.[1]}</Button>
+                                  </Grid>
+
                                 </Grid>
-                                <Grid item xs={6}>
-                                <Button
-                                variant='contained'
-                                sx={{backgroundColor: '#1783EF'}}
-                                  onClick={() => jobDone(shuffles[1])}
-                                >{shuffles?.[1]}</Button>
+                              </Grid>
+                              <Grid item>
+                              <Grid container
+                                direction="column"
+                                alignItems={"center"}
+                                justifyContent="space-evenly"
+                                spacing={4}
+                                sx={{ml: -1}}>
+                                  <Grid item>
+                                    <Button
+                                    variant='contained'
+                                    sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                      onClick={() => jobDone(shuffles[2])}
+                                    >{shuffles?.[2]}</Button>
+                                  </Grid>
+                                  <Grid item>
+                                    <Button
+                                      variant='contained'
+                                      sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                        onClick={() => jobDone(shuffles[3])}
+                                      >{shuffles?.[3]}</Button>
+                                  </Grid>
                                 </Grid>
-                                <Grid item xs={6}>
-                                <Button
-                                variant='contained'
-                                sx={{backgroundColor: '#1783EF'}}
-                                  onClick={() => jobDone(shuffles[2])}
-                                >{shuffles?.[2]}</Button>
-                                </Grid>
-                                <Grid item xs={6}>
-                                <Button
-                                variant='contained'
-                                sx={{backgroundColor: '#1783EF'}}
-                                  onClick={() => jobDone(shuffles[3])}
-                                >{shuffles?.[3]}</Button>
-                                </Grid>
+                              </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -201,3 +238,6 @@ export default function Play() {
       </> 
       )
     }
+
+
+    

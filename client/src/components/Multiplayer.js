@@ -7,7 +7,7 @@ import GroupIcon from '@mui/icons-material/Group';
 
 export default function Multiplayer(props) {
   return (
-    <Box sx={{width:360, height:120, backgroundColor:'white'}}>
+    <Box sx={{width:360, height:120, backgroundColor:'grey'}}>
         <Grid container
             className="inner-grid-row"
             spacing={2}

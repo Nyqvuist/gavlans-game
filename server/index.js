@@ -8,6 +8,9 @@ app.use(cors())
 const quesRoute = require("./routes/csgo");
 app.use("/csgo", quesRoute);
 
+const leagueRoute = require("./routes/league")
+app.use("/league", leagueRoute);
+
 mongoose.connect(process.env.MONGO, () => {
     console.log("Database is connected.")
     
