@@ -65,12 +65,14 @@ export default function Play() {
         fetchData();
         start();
         trackArray = [];
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.state])
 
     useEffect(() => {
       if(question.length > 0) {
         shuffleArray();
       }
+      //eslint-disable-next-line react-hooks/exhaustive-deps
     },[isBusy])
 
     const createObj = (time) => {

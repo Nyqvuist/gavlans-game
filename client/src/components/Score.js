@@ -55,6 +55,7 @@ export default function Score({score, open, setOpen, game, array}) {
 
   useEffect(() => {
     checkScore(score)
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const handleClose = () => {
