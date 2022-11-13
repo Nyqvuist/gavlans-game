@@ -7,13 +7,14 @@ import GroupIcon from '@mui/icons-material/Group';
 
 export default function Multiplayer(props) {
   return (
-    <Box sx={{width:360, height:120, backgroundColor:'grey'}}>
+    <Box sx={{width:470, height:170, backgroundColor: '#D9DCD6', borderRadius: 2, opacity: 0.75}}>
         <Grid container
             className="inner-grid-row"
             spacing={2}
             direction='row'
-            justifyContent="space-around"
+            justifyContent="space-between"
             alignItems="center"
+            sx={{px: 6}}
             >
                 <Grid item>
                     <Grid container
@@ -21,12 +22,13 @@ export default function Multiplayer(props) {
                     className='first-column'
                     justifyContent="flex-start"
                     alignItems="flex-start"
+                    sx={{mr: 9}}
                     >
                         <Grid item>
-                            <Typography variant="h6">Multiplayer</Typography>
+                            <Typography sx={{fontSize:24}}>Multiplayer</Typography>   
                         </Grid>
-                        <Grid item sx={{pb:5}}>
-                            <Typography variant="subtitle2">Play with friends.</Typography>
+                        <Grid item sx={{mb: 4}}>
+                            <Typography sx={{fontSize: 18}}>Play with friends.</Typography>
                         </Grid>
                     </Grid>
                     
@@ -37,11 +39,11 @@ export default function Multiplayer(props) {
                     className="icon-column"
                     justifyContent="flex-end"
                     alignItems="flex-end">
-                        <Grid item>
+                        <Grid item sx={{mt: 3}}>
                             <GroupIcon/>
                         </Grid>
-                        <Grid item sx={{pt:3}}>
-                            <Button variant='contained' sx={{width:90, height:30}}>
+                        <Grid item sx={{mt: 4}}>
+                            <Button disabled variant='contained' sx={{width:90, height:40, textTransform: 'none', textDecoration:'none', fontSize: 16, fontWeight: 'medium'}}>
                                 Play!
                             </Button>
                         </Grid>

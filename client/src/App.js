@@ -9,8 +9,9 @@ import { ThemeProvider } from '@mui/material';
 const theme = createTheme({
   typography: {
     fontFamily: [
-      'Cormorant Garamond',
+      'EB Garamond',
       'serif',
+      'Cinzel',
     ].join(','),
   },});
 

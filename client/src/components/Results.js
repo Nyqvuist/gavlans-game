@@ -15,17 +15,17 @@ export default function Results() {
     alignItems={"center"}
     direction="column">
         <Grid item>
-            <Typography variant="h5" sx={{fontWeight:'bold', color: 'red', textTransform: 'uppercase', mt: 20}}>{location.state.game}</Typography>
+            <Typography variant="h5" sx={{fontWeight:'bold', color:'#D9DCD6', textTransform: 'uppercase', mt: 20}}>{location.state.game}</Typography>
         </Grid>
         <Grid item>
-            <Typography variant="subtitle2" sx={{fontWeight:'bold', color: 'red', mt:10}} >Score</Typography>
+            <Typography variant="subtitle2" sx={{fontWeight:'bold', color:'#D9DCD6', mt:10}} >Score</Typography>
         </Grid>
         <Grid item>
-            <Typography variant="h4" sx={{fontWeight:'bold', color: 'red'}}>{location.state.score + ' Points'}</Typography>
+            <Typography variant="h4" sx={{fontWeight:'bold', color:'#D9DCD6'}}>{location.state.score + ' Points'}</Typography>
         </Grid>
         <Grid item>
-            <Paper square sx={{backgroundColor: 'grey', px:5, py: 5, opacity: 0.75}}>
-                <Typography variant='h4' sx={{alignItems: 'center', textAlign: 'center', mb: 4}}>Results Summary</Typography>
+            <Paper square sx={{backgroundColor: '#D9DCD6', px:5, py: 5, opacity: 0.75}}>
+                <Typography variant='h4' sx={{alignItems: 'center', textAlign: 'center', mb: 4, color:'#39352B'}}>Results Summary</Typography>
                 <Grid container
                 rowSpacing={0}
                 direction="row">
@@ -36,13 +36,13 @@ export default function Results() {
                         alignItems={"flex-start"}
                         direction="column">
                             <Grid item sx={{mr:12}}>
-                                <Typography variant="h5">Questions</Typography>
+                                <Typography variant="h5" sx={{color:'#39352B'}}>Questions</Typography>
                                 <Divider variant='middle'/>
                             </Grid>
                             {array.map((item, index) => (
                                 <Grid item
                                 key={index}>
-                                    <Typography> Question {item.Index}</Typography>
+                                    <Typography sx={{color:'#39352B'}}> Question {item.Index}</Typography>
                                 </Grid>
                             ))}
 
@@ -55,13 +55,13 @@ export default function Results() {
                         alignItems={"flex-end"}
                         direction="column">
                             <Grid item>
-                                <Typography variant="h5">Time Completed</Typography>
+                                <Typography variant="h5" sx={{color:'#39352B'}}>Time Completed</Typography>
                                 <Divider variant='middle'/>
                             </Grid>
                             {array.map((item, index) => (
                                 <Grid item
                                 key={index}>
-                                    <Typography>{item.Time} Seconds</Typography>
+                                    <Typography sx={{color:'#39352B'}}>{item.Time} Seconds</Typography>
                                 </Grid>
                             ))}
 

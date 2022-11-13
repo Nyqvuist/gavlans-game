@@ -9,7 +9,7 @@ import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
 
 
-const trackArray = []
+let trackArray = []
 
 export default function Play() {
 
@@ -64,6 +64,7 @@ export default function Play() {
         }
         fetchData();
         start();
+        trackArray = [];
     }, [location.state])
 
     useEffect(() => {
@@ -135,14 +136,14 @@ export default function Play() {
             <Score score={score} open={open} setOpen={setOpen} game={location.state} array={trackArray}/>
           ) : (
             <Grid container
-            spacing={2}
+            spacing={0}
             justifyContent="center"
             alignItems="center"
             direction={"column"}>
               <Grid item>
-                <Typography variant="h3" sx={{mt:15, fontWeight: 'bold', textTransform: 'uppercase', color: 'green'}}>{location.state}</Typography>
+                <Typography sx={{mt:10, fontWeight: 'bold', textTransform: 'uppercase', color: '#D9DCD6', fontFamily: 'Cinzel', fontSize: 54}}>{location.state}</Typography>
               </Grid>
-                <Grid item sx={{width:125, height:125, mt: 8}}>
+                <Grid item sx={{mt: 5}}>
                   <ProgressBar progress={progress} index={index}/>
                 </Grid>
                 <Grid container
@@ -159,17 +160,17 @@ export default function Play() {
                         <Grid item>
                             <Grid container
                             direction='column'
-                            spacing={2}
+                            spacing={0}
                             justifyContent="center"
                             alignItems="center">
                                 <Grid item>
-                                <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'green', mt: 8, fontSize: 32}}>
+                                <Typography sx={{textAlign:'center', fontWeight: 500, color: '#D9DCD6', mt: 8, fontSize: 36}}>
                                         {ques} 
                                 </Typography>
  
                                 </Grid>
                                 <Grid item>
-                                    <Typography variant="h5" sx={{textAlign:'center', fontWeight:'bold', color: 'green', mb: 4}}>
+                                    <Typography sx={{textAlign:'center', color: '#D9DCD6', mb: 4, fontSize: 36, fontWeight: 'bold'}}>
                                         {name} 
                                     </Typography>
                                 </Grid>
@@ -192,14 +193,14 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    sx={{backgroundColor: '#1783EF', fontSize:13, height: 50, width:260}}
+                                    sx={{backgroundColor: '#59709b', fontSize: 20, height: 55, width:350, color: '#D9DCD6', fontWeight: 500}}
                                       onClick={() => jobDone(shuffles[0])}
                                     >{shuffles?.[0]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                      sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
                                         onClick={() => jobDone(shuffles[1])}
                                       >{shuffles?.[1]}</Button>
                                   </Grid>
@@ -216,14 +217,14 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                    sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
                                       onClick={() => jobDone(shuffles[2])}
                                     >{shuffles?.[2]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      sx={{backgroundColor: '#1783EF', fontSize: 13, height:50, width:260}}
+                                      sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
                                         onClick={() => jobDone(shuffles[3])}
                                       >{shuffles?.[3]}</Button>
                                   </Grid>

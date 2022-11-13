@@ -23,7 +23,7 @@ export default function Main() {
         alignItems="center"
         >
             <Grid item>
-                <Typography variant ='h2' sx={{color:'#D9DCD6', mt: 5}}>Esport Guesser</Typography>
+                <Typography variant ='h2' sx={{color:'#D9DCD6', mt: 5}}>Gavlan Games</Typography>
             </Grid>
             <Grid item>
                 <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24}}>Play trivia games from the biggest collections</Typography>

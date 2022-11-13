@@ -1,5 +1,5 @@
 import React from 'react'
-import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "../styles/progress.css";
 
@@ -11,12 +11,20 @@ export default function progressTimer({progress, index}) {
         maxValue={10}
         value={progress}
         text={(index + 1) + " / 5"}
-        styles={buildStyles({
-            trokeLinecap: 'butt',
-            textSize:'24px',
+        styles={{
+          root: {width: 150, height:150},
+          path: {
+            stroke: `#B88846`,
             pathTransitionDuration: 0.5,
-
-        })}
+          },
+          trail: {
+            strokeLinecap: 'butt',
+          },
+          text: {
+            fontSize:'20px',
+            fill: '#B88846',
+          },            
+        }}
     />
   )
 }

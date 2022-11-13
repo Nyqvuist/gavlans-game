@@ -12,25 +12,27 @@ export default function Singleplayer() {
     const location = useLocation()
     
   return (
-    <Box sx={{width:360, height:120, backgroundColor:'grey'}}>
+    <Box sx={{width:470, height:170, backgroundColor: '#D9DCD6', borderRadius: 2, opacity: 0.75}}>
         <Grid container
             className="inner-grid-row"
             spacing={2}
             direction='row'
-            justifyContent="space-evenly"
+            justifyContent="space-between"
             alignItems="center"
+            sx={{px: 6}}
             >
                 <Grid item>
                     <Grid container
                     direction='column'
                     className='first-column'
                     justifyContent="flex-start"
-                    alignItems="flex-start">
+                    alignItems="flex-start"
+                    sx={{mr: 9}}>
                         <Grid item>
-                            <Typography variant="h6">Singleplayer</Typography>
+                            <Typography sx={{fontSize: 24}}>Singleplayer</Typography>
                         </Grid>
-                        <Grid item sx={{pb:5}}>
-                            <Typography variant="subtitle2">Play a game by yourself.</Typography>
+                        <Grid item sx={{mb: 4}}>
+                            <Typography sx={{fontSize: 18}}>Play a game by yourself.</Typography>
                         </Grid>
                     </Grid>
                     
@@ -41,12 +43,12 @@ export default function Singleplayer() {
                     className="icon-column"
                     justifyContent="flex-end"
                     alignItems="flex-end">
-                        <Grid item>
+                        <Grid item sx={{mt: 3}}>
                             <PersonIcon/>
                         </Grid>
-                        <Grid item sx={{pt:3}}>
+                        <Grid item sx={{mt: 4}}>
                             <NavLink to="/play" state={location.state} style={{textDecoration: 'none'}}>
-                                <Button variant='contained' sx={{width:90, height:30, textTransform: 'none', textDecoration:'none'}}>
+                                <Button variant='contained' sx={{width:90, height:40, textTransform: 'none', textDecoration:'none', backgroundColor: "#4A5E82", fontSize: 16, fontWeight: 'medium'}}>
                                     Play!
                                 </Button>
                             </NavLink>
