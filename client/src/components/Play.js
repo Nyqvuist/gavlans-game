@@ -7,6 +7,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Score from '../components/Score';
 import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
+import '../styles/play.css';
 
 
 let trackArray = []
@@ -47,7 +48,6 @@ export default function Play() {
     const [score, setScore] = useState(0)
     const [showScore, setShowScore] = useState(false)
     const [progress, setProgress] = useState(0)
-    const [name, setName] = useState('')
     const [answer, setAnswer] = useState('')
     const [ques, setQues] = useState('')
     const [shuffles, setShuffles] = useState([])
@@ -84,10 +84,8 @@ export default function Play() {
       let choices = shuffled?.slice(0,3)
       let answer = question[index]?.answer
       let ques = question[index]?.question
-      let name = question[index]?.name
       choices?.push(question[index].answer)
       let shuffles = choices?.sort(() => 0.5 - Math.random())
-      setName(name)
       setQues(ques)
       setAnswer(answer)
       setShuffles(shuffles)
@@ -141,7 +139,7 @@ export default function Play() {
             alignItems="center"
             direction={"column"}>
               <Grid item>
-                <Typography sx={{mt:10, fontWeight: 'bold', textTransform: 'uppercase', color: '#D9DCD6', fontFamily: 'Cinzel', fontSize: 54}}>{location.state}</Typography>
+                <Typography className='title' sx={{fontFamily: 'Cinzel'}}>{location.state}</Typography>
               </Grid>
                 <Grid item sx={{mt: 5}}>
                   <ProgressBar progress={progress} index={index}/>
@@ -164,15 +162,9 @@ export default function Play() {
                             justifyContent="center"
                             alignItems="center">
                                 <Grid item>
-                                <Typography sx={{textAlign:'center', fontWeight: 500, color: '#D9DCD6', mt: 8, fontSize: 36}}>
+                                <Typography className="question">
                                         {ques} 
                                 </Typography>
- 
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{textAlign:'center', color: '#D9DCD6', mb: 4, fontSize: 36, fontWeight: 'bold'}}>
-                                        {name} 
-                                    </Typography>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -193,14 +185,14 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    sx={{backgroundColor: '#59709b', fontSize: 20, height: 55, width:350, color: '#D9DCD6', fontWeight: 500}}
+                                    className="answer-buttons"
                                       onClick={() => jobDone(shuffles[0])}
                                     >{shuffles?.[0]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
+                                      className="answer-buttons"
                                         onClick={() => jobDone(shuffles[1])}
                                       >{shuffles?.[1]}</Button>
                                   </Grid>
@@ -217,14 +209,14 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
+                                    className="answer-buttons"
                                       onClick={() => jobDone(shuffles[2])}
                                     >{shuffles?.[2]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      sx={{backgroundColor: '#59709b', fontSize: 20, height:55, width:350, color: '#D9DCD6', fontWeight: 500}}
+                                      className="answer-buttons"
                                         onClick={() => jobDone(shuffles[3])}
                                       >{shuffles?.[3]}</Button>
                                   </Grid>

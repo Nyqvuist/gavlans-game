@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/main.css';
+import '../styles/start.css';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
 import Singleplayer from '../components/Singleplayer';
@@ -47,12 +47,12 @@ export default function Start() {
                     justifyContent="center"
                     alignItems="center">
                         <Grid item >
-                            <Paper className='fancy-border' sx={{backgroundColor: '#39352B', opacity: 0.85, px: 3,py: 3}}>
-                                <Typography variant='h4' sx={{color: "#D9DCD6", textAlign: 'center'}}>Quick Info</Typography>
-                                <Typography variant='h5' sx={{color: "#D9DCD6", mt: 4}}>• You will have 10 seconds to answer each question.</Typography>
-                                <Typography variant='h5' sx={{color: "#D9DCD6", my: 2}}>• The faster you answer the more points you will get.</Typography>
-                                <Typography variant='h5' sx={{color: "#D9DCD6", my: 2}}>• You will not know which questions you get wrong.</Typography>
-                                <Typography variant='h5' sx={{color: "#D9DCD6", my: 2}}>• Dont suck!</Typography>
+                            <Paper className='fancy-border'>
+                                <Typography className="info-header" variant='h4'>Quick Info</Typography>
+                                <Typography className="info-1" variant='h5'>• You will have 10 seconds to answer each question.</Typography>
+                                <Typography className="info-2" variant='h5'>• The faster you answer the more points you will get.</Typography>
+                                <Typography className="info-2" variant='h5'>• You will not know which questions you get wrong.</Typography>
+                                <Typography className="info-2" variant='h5'>• Dont suck!</Typography>
                             </Paper>
                         </Grid>
                     </Grid>

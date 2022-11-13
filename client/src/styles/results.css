@@ -1,0 +1,42 @@
+.title.title {
+    margin-top: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #D9DCD6;
+    font-size: 54px;
+}
+
+.score.score {
+    font-weight: bold;
+    color: #D9DCD6;
+    margin-top: 80px;
+    font-size: 24px;
+}
+
+.points.points {
+    font-weight: bold;
+    color: #D9DCD6;
+    font-size: 32px;
+}
+
+.summary-paper.summary-paper {
+    background-color: #D9DCD6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    opacity: 0.75;
+}
+
+.summary-title.summary-title {
+    color: #39352B;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+
+.item-map.item-map {
+    color: #39352B;
+    font-size: 18px;
+}

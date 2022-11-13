@@ -8,6 +8,7 @@ import { Button, DialogActions, Divider, Typography } from '@mui/material';
 import { useState } from 'react';
 import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
 import { NavLink } from 'react-router-dom';
+import '../styles/score.css';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -85,17 +86,22 @@ export default function Score({score, open, setOpen, game, array}) {
             py:3
           }}}
           >
-          <DialogTitle sx={{textAlign: 'center', fontSize: 46, fontWeight: 'bold', color: 'red', fontFamily: 'Cinzel'}}>{"Game Over"}</DialogTitle>
-          <Typography sx={{textAlign:'center', mb:2, fontWeight: 'bold', color:'#39352B'}}>{line}</Typography>
+          <DialogTitle className="game-over" sx={{fontFamily: 'Cinzel'}}>{"Game Over"}</DialogTitle>
+          <Typography className="random-line">{line}</Typography>
           <Divider variant='middle' light={true} />
           <DialogContent sx={{}}>
-            <DialogContentText sx={{textAlign: 'center', fontSize: 24, fontWeight: 'bold', color:'#39352B'}}>
+            <DialogContentText className="point">
               {score + " points"}
             </DialogContentText>
           </DialogContent>
           <DialogActions sx={{justifyContent: 'center'}}>
             <NavLink to='/results' state={{game: [game], array: [array], score: [score]}} style={{textDecoration: 'none'}}>
-              <Button variant="contained"  color='success' endIcon={<KeyboardArrowRightSharpIcon/>}  disableElevation sx={{textTransform: 'none', backgroundColor: '#4A5E82'}}>Next</Button>
+              <Button 
+              variant="contained"  
+              color='success' 
+              endIcon={<KeyboardArrowRightSharpIcon/>}  
+              disableElevation
+              className='next-button'>Next</Button>
             </NavLink>
           </DialogActions>
     </Dialog>

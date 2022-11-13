@@ -1,6 +1,7 @@
 import { Divider, Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import '../styles/results.css';
 
 
 export default function Results() {
@@ -15,17 +16,17 @@ export default function Results() {
     alignItems={"center"}
     direction="column">
         <Grid item>
-            <Typography variant="h5" sx={{fontWeight:'bold', color:'#D9DCD6', textTransform: 'uppercase', mt: 20}}>{location.state.game}</Typography>
+            <Typography className="title" sx={{fontFamily: 'Cinzel'}}>{location.state.game}</Typography>
         </Grid>
         <Grid item>
-            <Typography variant="subtitle2" sx={{fontWeight:'bold', color:'#D9DCD6', mt:10}} >Score</Typography>
+            <Typography className="score">Score</Typography>
         </Grid>
         <Grid item>
-            <Typography variant="h4" sx={{fontWeight:'bold', color:'#D9DCD6'}}>{location.state.score + ' Points'}</Typography>
+            <Typography className="points">{location.state.score + ' Points'}</Typography>
         </Grid>
         <Grid item>
-            <Paper square sx={{backgroundColor: '#D9DCD6', px:5, py: 5, opacity: 0.75}}>
-                <Typography variant='h4' sx={{alignItems: 'center', textAlign: 'center', mb: 4, color:'#39352B'}}>Results Summary</Typography>
+            <Paper square className="summary-paper">
+                <Typography className='summary-title'>Results Summary</Typography>
                 <Grid container
                 rowSpacing={0}
                 direction="row">
@@ -42,7 +43,7 @@ export default function Results() {
                             {array.map((item, index) => (
                                 <Grid item
                                 key={index}>
-                                    <Typography sx={{color:'#39352B'}}> Question {item.Index}</Typography>
+                                    <Typography className="item-map" > Question {item.Index}</Typography>
                                 </Grid>
                             ))}
 
@@ -61,10 +62,9 @@ export default function Results() {
                             {array.map((item, index) => (
                                 <Grid item
                                 key={index}>
-                                    <Typography sx={{color:'#39352B'}}>{item.Time} Seconds</Typography>
+                                    <Typography className="item-map">{item.Time} Seconds</Typography>
                                 </Grid>
                             ))}
-
                         </Grid>
                     </Grid>
                 </Grid>

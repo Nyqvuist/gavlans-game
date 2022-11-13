@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
 import test from '../assets/unnamed.png';
 import { NavLink } from 'react-router-dom';
+import Tooltip from '@mui/material/Tooltip';
 
 
 export default function Main() {
@@ -39,12 +40,16 @@ export default function Main() {
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="csgo">
-                    <img className='img' src={test} alt='csgo' width='100' height='100'/>  
+                    <Tooltip title="CSGO" placement='top' arrow>
+                      <img className='img' src={test} alt='csgo' width='100' height='100'/>  
+                    </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="league">
-                    <img className='img' src={test} alt='league' width='100' height='100'/>  
+                    <Tooltip title='LEAGUE' placement='top' arrow>
+                      <img className='img' src={test} alt='league' width='100' height='100'/>  
+                    </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item>

@@ -1,0 +1,25 @@
+.title.title {
+    margin-top: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #D9DCD6;
+    font-size: 54px;
+}
+
+.question.question {
+    text-align: center ;
+    font-weight: 500;
+    color: #D9DCD6;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    font-size: 36px;
+}
+
+.answer-buttons.answer-buttons {
+    background-color: #59709b;
+    font-size: 20px;
+    height: 55px;
+    width: 350px;
+    color: #D9DCD6;
+    font-weight: 500;
+}
