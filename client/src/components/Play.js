@@ -198,7 +198,6 @@ export default function Play() {
                                         onClick={() => jobDone(shuffles[1])}
                                       >{shuffles?.[1]}</Button>
                                   </Grid>
-
                                 </Grid>
                               </Grid>
                               <Grid item>

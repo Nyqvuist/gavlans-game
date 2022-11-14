@@ -71,7 +71,6 @@ export default function Score({score, open, setOpen, game, array}) {
       setLine(getRandomItem(badArray))
     } 
   }
-  console.log(game, array)
 
   return (
     <Dialog
