@@ -48,11 +48,11 @@ export default function Start() {
                     alignItems="center">
                         <Grid item >
                             <Paper className='fancy-border'>
-                                <Typography className="info-header" variant='h4'>Quick Info</Typography>
-                                <Typography className="info-1" variant='h5'>• You will have 10 seconds to answer each question.</Typography>
-                                <Typography className="info-2" variant='h5'>• The faster you answer the more points you will get.</Typography>
-                                <Typography className="info-2" variant='h5'>• You will not know which questions you get wrong.</Typography>
-                                <Typography className="info-2" variant='h5'>• Dont suck!</Typography>
+                                <Typography className="info-header">Quick Info</Typography>
+                                <Typography className="info-1" >• You will have 10 seconds to answer each question.</Typography>
+                                <Typography className="info-2" >• The faster you answer the more points you will get.</Typography>
+                                <Typography className="info-2" >• You will not know which questions you get wrong.</Typography>
+                                <Typography className="info-2" >• Dont suck!</Typography>
                             </Paper>
                         </Grid>
                     </Grid>
@@ -62,10 +62,10 @@ export default function Start() {
                     direction='column'
                     justifyContent="center"
                     alignItems="center">
-                        <Grid item sx={{mt: 1.5}}>
+                        <Grid item sx={{mt: 2}}>
                             <Singleplayer category={location.state}/>
                         </Grid>
-                        <Grid item sx={{mt: 5.5}}>
+                        <Grid item sx={{mt: 9}}>
                             <Multiplayer category={location.state}/>
                         </Grid>
                     </Grid>

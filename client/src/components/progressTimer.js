@@ -12,10 +12,10 @@ export default function progressTimer({progress, index}) {
         value={progress}
         text={(index + 1) + " / 5"}
         styles={{
-          root: {width: 150, height:150},
+          root: {width: 170, height:170},
           path: {
             stroke: `#B88846`,
-            pathTransitionDuration: 0.5,
+            pathTransitionDuration: 0.75,
           },
           trail: {
             strokeLinecap: 'butt',

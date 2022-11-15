@@ -1,7 +1,8 @@
-import { Divider, Grid, Paper, Typography } from '@mui/material';
+import { Button, Divider, Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import '../styles/results.css';
+import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
 
 
 export default function Results() {
@@ -11,7 +12,7 @@ export default function Results() {
 
   return (
     <Grid container
-    spacing={2}
+    spacing={0}
     justifyContent="center"
     alignItems={"center"}
     direction="column">
@@ -19,7 +20,7 @@ export default function Results() {
             <Typography className="title" sx={{fontFamily: 'Cinzel'}}>{location.state.game}</Typography>
         </Grid>
         <Grid item>
-            <Typography className="score">Score</Typography>
+            <Typography className="score">Your Score</Typography>
         </Grid>
         <Grid item>
             <Typography className="points">{location.state.score + ' Points'}</Typography>
@@ -36,14 +37,14 @@ export default function Results() {
                         justifyContent="flex-start"
                         alignItems={"flex-start"}
                         direction="column">
-                            <Grid item sx={{mr:12}}>
-                                <Typography variant="h5" sx={{color:'#39352B'}}>Questions</Typography>
+                            <Grid item sx={{mr:20,mb:1}}>
+                                <Typography className="item-titles">Questions</Typography>
                                 <Divider variant='middle'/>
                             </Grid>
                             {array.map((item, index) => (
                                 <Grid item
                                 key={index}>
-                                    <Typography className="item-map" > Question {item.Index}</Typography>
+                                    <Typography className="item-map" > Question #{item.Index}</Typography>
                                 </Grid>
                             ))}
 
@@ -55,8 +56,8 @@ export default function Results() {
                         justifyContent="flex-end"
                         alignItems={"flex-end"}
                         direction="column">
-                            <Grid item>
-                                <Typography variant="h5" sx={{color:'#39352B'}}>Time Completed</Typography>
+                            <Grid item sx={{mb: 1}}>
+                                <Typography className="item-titles">Time Completed</Typography>
                                 <Divider variant='middle'/>
                             </Grid>
                             {array.map((item, index) => (
@@ -69,6 +70,19 @@ export default function Results() {
                     </Grid>
                 </Grid>
             </Paper>
+        </Grid>
+        <Grid item sx={{mt: 5}}>
+            <NavLink to="/">
+                <Button className="home-page" 
+                variant='outlined'
+                >home</Button>
+            </NavLink>
+            <NavLink to="/play" style={{textDecoration: 'none'}} state={location.state.game}>
+                <Button className="play-again-button"
+                variant='contained'
+                endIcon={<KeyboardArrowRightSharpIcon/>}  
+                >Play Again</Button>
+            </NavLink>      
         </Grid>
     </Grid>
   )

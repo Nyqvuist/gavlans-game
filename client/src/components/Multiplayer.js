@@ -43,7 +43,7 @@ export default function Multiplayer(props) {
                             <GroupIcon/>
                         </Grid>
                         <Grid item sx={{mt: 4}}>
-                            <Button disabled variant='contained' sx={{width:90, height:40, textTransform: 'none', textDecoration:'none', fontSize: 16, fontWeight: 'medium'}}>
+                            <Button disabled variant='contained' sx={{width:90, height:40, textTransform: 'uppercase', textDecoration:'none', backgroundColor: "#4A5E82", fontSize: 16, letterSpacing: 1}}>
                                 Play!
                             </Button>
                         </Grid>

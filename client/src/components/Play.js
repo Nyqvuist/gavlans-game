@@ -143,7 +143,7 @@ export default function Play() {
               <Grid item>
                 <Typography className='title' sx={{fontFamily: 'Cinzel'}}>{location.state}</Typography>
               </Grid>
-                <Grid item sx={{mt: 5}}>
+                <Grid item sx={{mt: 6}}>
                   <ProgressBar progress={progress} index={index}/>
                 </Grid>
                 <Grid container

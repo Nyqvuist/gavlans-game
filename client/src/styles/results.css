@@ -7,37 +7,75 @@
 }
 
 .score.score {
-    font-weight: bold;
     color: #D9DCD6;
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 24px;
 }
 
 .points.points {
     font-weight: bold;
-    color: #D9DCD6;
-    font-size: 32px;
+    color: #B88846;
+    font-size: 48px;
+    margin-bottom: 30px;
 }
 
 .summary-paper.summary-paper {
-    background-color: #D9DCD6;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    background-color: #39352B !important; 
+    border: 25px solid #B88846;
+    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     opacity: 0.75;
     border-radius: 5px;
 }
 
 .summary-title.summary-title {
-    color: #39352B;
+    color: #D9DCD6;
     align-items: center;
     text-align: center;
-    margin-bottom: 32px;
-    font-size: 24px;
+    margin-bottom: 24px;
+    font-size: 36px;
 }
 
 .item-map.item-map {
-    color: #39352B;
+    color: #D9DCD6;
     font-size: 18px;
+}
+
+.item-titles.item-titles {
+    color: #D9DCD6;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.play-again-button.play-again-button {
+    background-color: #4A5E82;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.home-page.home-page {
+    border: 3px solid;
+    border-color: #4A5E82;
+    border-radius: 7px;
+    display: inline-block;
+    color: #4A5E82;
+    background-color: #c1c4bf;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }

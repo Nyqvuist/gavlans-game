@@ -1,8 +1,9 @@
 .game-over.game-over {
     text-align: center;
-    font-size: 46px;
+    font-size: 48px;
     font-weight: bold;
-    color: red;
+    color: #B88846;
+    margin-bottom: -15px;
 }
 
 .random-line.random-line {
@@ -10,11 +11,12 @@
     margin-bottom: 16px;
     font-weight: bold;
     color: #39352B;
+    font-size: 24px;
 }
 
 .point.point {
     text-align: center;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     color: #39352B;
 }
@@ -22,4 +24,26 @@
 .next-button.next-button {
     text-transform: none;
     background-color: #4A5E82;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: 15px;
+}
+
+
+.next-button.next-button:hover{
+    background-color: #334669;
+}
+
+.your-score.your-score {
+    text-align: center;
+    font-size: 24px;
+    color: #39352B;
+    margin-top: 24px;
 }

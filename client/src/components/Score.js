@@ -82,14 +82,17 @@ export default function Score({score, open, setOpen, game, array}) {
           sx={{'& .MuiDialog-paper': {
             backgroundColor: '#D9DCD6',
             opacity: 0.75,
-            px:3,
-            py:3
+            px:8,
+            py:5
           }}}
           >
           <DialogTitle className="game-over" sx={{fontFamily: 'Cinzel'}}>{"Game Over"}</DialogTitle>
           <Typography className="random-line">{line}</Typography>
           <Divider variant='middle' light={true} />
-          <DialogContent sx={{}}>
+          <DialogContent>
+            <DialogContentText className='your-score'>
+              Your Score
+            </DialogContentText>
             <DialogContentText className="point">
               {score + " points"}
             </DialogContentText>
