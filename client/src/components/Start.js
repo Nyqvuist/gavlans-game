@@ -8,8 +8,6 @@ import { Link } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import '../styles/border.css';
-import 'animate.css';
-
 
 export default function Start() {
     
@@ -47,7 +45,7 @@ export default function Start() {
                     className='first-column'
                     justifyContent="center"
                     alignItems="center">
-                        <Grid item class="animate__animated animate__fadeInLeft">
+                        <Grid item>
                             <Paper className='fancy-border'>
                                 <Typography className="info-header">Quick Info</Typography>
                                 <Typography className="info-1" >• You will have 10 seconds to answer each question.</Typography>

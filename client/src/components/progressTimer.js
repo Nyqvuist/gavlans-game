@@ -3,6 +3,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "../styles/progress.css";
 
+
 export default function progressTimer({progress, index}) {
   return (
 

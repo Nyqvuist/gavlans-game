@@ -15,7 +15,7 @@
     font-size: 36px;
 }
 
-.answer-buttons.answer-buttons {
+.animate__animated.animate__fadeInUp.animate__animated.animate__fadeInUp {
     background-color: #59709b;
     font-size: 20px;
     height: 55px;
@@ -24,8 +24,16 @@
     font-weight: 600;
     letter-spacing: 1px;
     border-radius: 7px;
+    overflow: hidden;
 }
 
-.answer-buttons.answer-buttons:hover {
+.animate__animated.animate__fadeInUp.animate__animated.animate__fadeInUp:hover {
     background-color: #334669;
+}
+
+.animate__animated.animate__flash {
+    -o-animation-delay: 8s;
+    animation-delay: 8s;
+    animation-duration: 2s;
+    -o-animation-duration: 2s;
 }

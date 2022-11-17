@@ -8,6 +8,7 @@ import Score from '../components/Score';
 import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
 import '../styles/play.css';
+import "animate.css";
 
 
 let trackArray = []
@@ -143,7 +144,7 @@ export default function Play() {
               <Grid item>
                 <Typography className='title' sx={{fontFamily: 'Cinzel'}}>{location.state}</Typography>
               </Grid>
-                <Grid item sx={{mt: 6}}>
+                <Grid item key={index} className="animate__animated animate__flash" sx={{mt: 6}} >
                   <ProgressBar progress={progress} index={index}/>
                 </Grid>
                 <Grid container
@@ -187,14 +188,16 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    className="answer-buttons"
+                                    key={index}
+                                    className="animate__animated animate__fadeInUp"
                                       onClick={() => jobDone(shuffles[0])}
                                     >{shuffles?.[0]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      className="answer-buttons"
+                                      key={index}
+                                      className="animate__animated animate__fadeInUp"
                                         onClick={() => jobDone(shuffles[1])}
                                       >{shuffles?.[1]}</Button>
                                   </Grid>
@@ -210,14 +213,16 @@ export default function Play() {
                                   <Grid item>
                                     <Button
                                     variant='contained'
-                                    className="answer-buttons"
+                                    key={index}
+                                    className="animate__animated animate__fadeInUp"
                                       onClick={() => jobDone(shuffles[2])}
                                     >{shuffles?.[2]}</Button>
                                   </Grid>
                                   <Grid item>
                                     <Button
                                       variant='contained'
-                                      className="answer-buttons"
+                                      key={index}
+                                      className="animate__animated animate__fadeInUp"
                                         onClick={() => jobDone(shuffles[3])}
                                       >{shuffles?.[3]}</Button>
                                   </Grid>

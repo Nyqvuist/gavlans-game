@@ -79,3 +79,10 @@
     padding-top: 9px;
     padding-bottom: 9px;
 }
+
+.home-page.home-page:hover {
+    border: 3px solid;
+    border-color: #4A5E82;
+    border-radius: 7px;
+    display: inline-block;
+}
