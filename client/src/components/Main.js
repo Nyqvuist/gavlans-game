@@ -42,7 +42,7 @@ export default function Main() {
                 <Grid item>
                   <NavLink to='/start' state="csgo">
                     <Tooltip title="CSGO" placement='top' arrow>
-                      <img className='img' src={test} alt='csgo' width='100' height='10'/>  
+                      <img className='img' src={test} alt='csgo' width='100' height='100'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
