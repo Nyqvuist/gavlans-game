@@ -72,12 +72,12 @@ export default function Results() {
             </Paper>
         </Grid>
         <Grid item sx={{mt: 5}}>
-            <NavLink to="/">
+            <NavLink to="/gavlans-game">
                 <Button className="home-page" 
                 variant='outlined'
                 >home</Button>
             </NavLink>
-            <NavLink to="/play" style={{textDecoration: 'none'}} state={location.state.game}>
+            <NavLink to="/gavlans-game/play" style={{textDecoration: 'none'}} state={location.state.game}>
                 <Button className="play-again-button"
                 variant='contained'
                 endIcon={<KeyboardArrowRightSharpIcon/>}  

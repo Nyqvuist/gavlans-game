@@ -20,10 +20,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/" element={<Main/>}/>
-          <Route path="/start" element={<Start/>}/>
-          <Route path='/play' element={<Play/>}/>
-          <Route path='/results' element={<Results/>}/>
+          <Route path="/gavlans-game" element={<Main/>}/>
+          <Route path="/gavlans-game/start" element={<Start/>}/>
+          <Route path='/gavlans-game/play' element={<Play/>}/>
+          <Route path='/gavlans-game/results' element={<Results/>}/>
         </Routes>
       </Router>
     </ThemeProvider>
