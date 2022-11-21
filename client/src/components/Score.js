@@ -20,6 +20,7 @@ const goodArray = [
   'You did a lot better than any of us thought you would!',
   'You totally live up to your reputation',
   'You worked really hard to get that done, didn\'t you?',
+  'Nice!',
 ]
 
 const mediocreArray = [
@@ -58,10 +59,6 @@ export default function Score({score, open, setOpen, game, array}) {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const checkScore = (score) => {
     if(score >= 400){
       setLine(getRandomItem(goodArray))
@@ -77,7 +74,6 @@ export default function Score({score, open, setOpen, game, array}) {
           open={open}
           TransitionComponent={Transition}
           keepMounted
-          onClose={handleClose}
           aria-describedby="alert-dialog-slide-description"
           sx={{'& .MuiDialog-paper': {
             backgroundColor: '#D9DCD6',

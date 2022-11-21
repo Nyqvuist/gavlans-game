@@ -80,7 +80,7 @@ export default function Main() {
               </Grid>
             </Grid>
         </Grid>
-        <Footer className="footer"/>
+        <Footer/>
     </Grid>
   )
 }

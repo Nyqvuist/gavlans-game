@@ -58,7 +58,7 @@ export default function Play() {
     useEffect(() => {
       setIsBusy(true)
         const fetchData = async () => {
-            const result = await axios.get(`http://172.19.96.235:3001/${location.state}`)
+            const result = await axios.get(`http://localhost:3001/${location.state}`)
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
@@ -81,7 +81,6 @@ export default function Play() {
       trackArray.push(obj)
     };
 
-    // This shuffles the choices 
     const shuffleArray = () => {
       let array = question[index]?.choices?.map(choice => choice)
       let shuffled = array?.sort(() => 0.5 - Math.random());
@@ -94,8 +93,7 @@ export default function Play() {
       setAnswer(answer)
       setShuffles(shuffles)
     }
-    
-    // This is the main game logic to check answers
+      
     const jobDone = (shuffle) => {
       if(shuffle === answer){
         pause();

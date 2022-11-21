@@ -72,7 +72,7 @@ export default function Start() {
                 </Grid>
             </Grid>
         </Grid>
-        <Footer className="footer"/>
+        <Footer/>
     </Grid>
   )
 }
