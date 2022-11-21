@@ -1,5 +1,5 @@
 import Main from '../src/components/Main';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Start from '../src/components/Start';
 import Play from '../src/components/Play';
 import Results from '../src/components/Results';
@@ -20,10 +20,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/gavlans-game" element={<Main/>}/>
-          <Route path="/gavlans-game/start" element={<Start/>}/>
-          <Route path='/gavlans-game/play' element={<Play/>}/>
-          <Route path='/gavlans-game/results' element={<Results/>}/>
+          <Route path="" element={<Main/>}/>
+          <Route path="/start" element={<Start/>}/>
+          <Route path='/play' element={<Play/>}/>
+          <Route path='/results' element={<Results/>}/>
         </Routes>
       </Router>
     </ThemeProvider>

@@ -94,7 +94,7 @@ export default function Score({score, open, setOpen, game, array}) {
             </DialogContentText>
           </DialogContent>
           <DialogActions sx={{justifyContent: 'center'}}>
-            <NavLink to='/gavlans-game/results' state={{game: [game], array: [array], score: [score]}} style={{textDecoration: 'none'}}>
+            <NavLink to='/results' state={{game: [game], array: [array], score: [score]}} style={{textDecoration: 'none'}}>
               <Button 
               variant="contained"  
               color='success' 

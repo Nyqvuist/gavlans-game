@@ -21,7 +21,7 @@ export default function Start() {
     justifyContent="center"
     alignItems="center">
         <Grid item>
-            <Link href="/gavlans-game" style={{textDecoration: 'none'}}>
+            <Link href="/" style={{textDecoration: 'none'}}>
                 <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color: "#D9DCD6"}}> LOGO </Typography>
             </Link>   
         </Grid>
