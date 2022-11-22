@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO, () => {
     
 });
 
-app.listen(3001, '108.61.147.152', () =>
+app.listen(3000, () =>
     console.log('Server is online.')
 );
 
