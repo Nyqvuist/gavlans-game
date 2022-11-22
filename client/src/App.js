@@ -1,5 +1,5 @@
 import Main from '../src/components/Main';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Routes, Route, HashRouter } from 'react-router-dom';
 import Start from '../src/components/Start';
 import Play from '../src/components/Play';
 import Results from '../src/components/Results';
@@ -18,14 +18,14 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <HashRouter basename='/gavlans-game' >
         <Routes>
           <Route path="" element={<Main/>}/>
           <Route path="/start" element={<Start/>}/>
           <Route path='/play' element={<Play/>}/>
           <Route path='/results' element={<Results/>}/>
         </Routes>
-      </Router>
+      </HashRouter>
     </ThemeProvider>
   );
 }
