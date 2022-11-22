@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <HashRouter basename='/gavlans-game' >
         <Routes>
-          <Route path="" element={<Main/>}/>
+          <Route path="/" element={<Main/>}/>
           <Route path="/start" element={<Start/>}/>
           <Route path='/play' element={<Play/>}/>
           <Route path='/results' element={<Results/>}/>
