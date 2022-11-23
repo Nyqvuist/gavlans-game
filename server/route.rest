@@ -1,1 +1,1 @@
-GET http://localhost:3001/league
+GET http://173.68.87.222:3001/league
