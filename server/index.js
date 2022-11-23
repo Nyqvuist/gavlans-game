@@ -11,8 +11,8 @@ app.use(cors())
 https 
     .createServer(
         {
-            key: fs.readFileSync("key.pem"),
-            cert: fs.readFileSync("cert.pem")
+            key: fs.readFileSync("localhost.key"),
+            cert: fs.readFileSync("localhost.crt")
         },
         app
     )
