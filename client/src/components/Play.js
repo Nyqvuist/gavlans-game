@@ -58,7 +58,7 @@ export default function Play() {
     useEffect(() => {
       setIsBusy(true)
         const fetchData = async () => {
-            const result = await axios.get(`http://52.91.29.19:3001/${location.state}`)
+            const result = await axios.get(`http://52.91.29.19/${location.state}`)
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
