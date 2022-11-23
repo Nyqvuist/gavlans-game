@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO, () => {
     
 });
 
-app.listen(3001, () =>
+app.listen(80, () =>
     console.log('Server is online.')
 );
 
