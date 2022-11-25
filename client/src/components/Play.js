@@ -67,7 +67,7 @@ export default function Play() {
         start();
         trackArray = [];
         //eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location.state])
+    }, [])
 
     useEffect(() => {
       if(question.length > 0) {
@@ -80,6 +80,8 @@ export default function Play() {
       let obj = {Time: time, Index: index + 1}
       trackArray.push(obj)
     };
+
+    console.log(question)
 
     // This shuffles the choices 
     const shuffleArray = () => {
