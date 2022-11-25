@@ -4,3 +4,4 @@ server/csr.pem
 server/localhost.conf
 server/localhost.crt
 server/localhost.key
+server/functions/firebase-debug.log
