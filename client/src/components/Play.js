@@ -20,11 +20,11 @@ export default function Play() {
     onTimeOver: () => {
       if(done){
         if(index < (question.length - 1)) {
-          reset();
           setIndex(index + 1)
+          reset();
           createObj(10);
           start();
-          shuffleArray();
+          
         } else {
           pause();
           createObj(10);
@@ -64,7 +64,6 @@ export default function Play() {
             setIsBusy(false)
         }
         fetchData();
-        start();
         trackArray = [];
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -72,16 +71,20 @@ export default function Play() {
     useEffect(() => {
       if(question.length > 0) {
         shuffleArray();
+        start();
       }
       //eslint-disable-next-line react-hooks/exhaustive-deps
     },[isBusy])
+
+    useEffect(() => {
+      shuffleArray();
+      //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index])
 
     const createObj = (time) => {
       let obj = {Time: time, Index: index + 1}
       trackArray.push(obj)
     };
-
-    console.log(question)
 
     // This shuffles the choices 
     const shuffleArray = () => {
@@ -89,11 +92,12 @@ export default function Play() {
       let shuffled = array?.sort(() => 0.5 - Math.random());
       let choices = shuffled?.slice(0,3)
       let answer = question[index]?.answer
+      setAnswer(answer)
       let ques = question[index]?.question
+      console.log("shuffle" + ques)
+      setQues(ques)
       choices?.push(question[index].answer)
       let shuffles = choices?.sort(() => 0.5 - Math.random())
-      setQues(ques)
-      setAnswer(answer)
       setShuffles(shuffles)
     }
     
@@ -107,19 +111,17 @@ export default function Play() {
         } else {
           setScore(score + (Math.floor(points / time)))
         }
+        setIndex(index + 1)
         let obj = {Time: time, Index: index + 1}
         trackArray.push(obj)
         reset();
-        setIndex(index + 1)
-        shuffleArray();
         start();
       } else if (shuffle !== answer){
+        setIndex(index + 1)
         pause();
         let obj = {Time: time, Index: index + 1}
         trackArray.push(obj)
         reset();
-        setIndex(index + 1)
-        shuffleArray();
         start();
       }
       if(index === (question.length - 1)){

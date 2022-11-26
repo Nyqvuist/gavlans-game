@@ -16,7 +16,7 @@ export default function progressTimer({progress, index}) {
           root: {width: 170, height:170},
           path: {
             stroke: `#B88846`,
-            pathTransitionDuration: 0.75,
+            pathTransitionDuration: 0.5,
           },
           trail: {
             strokeLinecap: 'butt',
