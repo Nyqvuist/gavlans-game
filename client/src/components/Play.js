@@ -9,6 +9,7 @@ import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
 import '../styles/play.css';
 import "animate.css";
+import Header from "./Header";
 
 
 let trackArray = []
@@ -142,14 +143,13 @@ export default function Play() {
           {showScore ? (
             <Score score={score} open={open} setOpen={setOpen} game={location.state} array={trackArray}/>
           ) : (
+            <>
+            <Header game={location.state}/>
             <Grid container
             spacing={0}
             justifyContent="center"
             alignItems="center"
             direction={"column"}>
-              <Grid item>
-                <Typography className='title' sx={{fontFamily: 'Cinzel'}}>{location.state}</Typography>
-              </Grid>
                 <Grid item key={index} className="animate__animated animate__flash" sx={{mt: 6}} >
                   <ProgressBar progress={progress} index={index}/>
                 </Grid>
@@ -239,6 +239,7 @@ export default function Play() {
                     </Grid>
                 </Grid>
             </Grid>
+            </>
           )} 
       </> 
       )

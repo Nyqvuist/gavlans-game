@@ -6,6 +6,10 @@
     font-size: 54px;
 }
 
+.header-logo {
+    object-position: left top;
+}
+
 .question.question {
     text-align: center ;
     font-weight: 600;

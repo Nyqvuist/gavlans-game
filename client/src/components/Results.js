@@ -3,6 +3,7 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../styles/results.css';
 import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
+import Header from "./Header";
 
 
 export default function Results() {
@@ -11,14 +12,13 @@ export default function Results() {
     const array = location.state.array[0]
 
   return (
+    <>
+    <Header game={location.state.game}/>
     <Grid container
     spacing={0}
     justifyContent="center"
     alignItems={"center"}
     direction="column">
-        <Grid item>
-            <Typography className="title" sx={{fontFamily: 'Cinzel'}}>{location.state.game}</Typography>
-        </Grid>
         <Grid item>
             <Typography className="score">Your Score</Typography>
         </Grid>
@@ -85,5 +85,6 @@ export default function Results() {
             </NavLink>      
         </Grid>
     </Grid>
+    </>
   )
 }

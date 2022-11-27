@@ -2,84 +2,80 @@ import React from 'react';
 import '../styles/main.css';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
-import test from '../assets/unnamed.png';
 import { NavLink } from 'react-router-dom';
 import Tooltip from '@mui/material/Tooltip';
 import Footer from './Footer';
+import logo from "../assets/Gavlans_Game_Logo_v2.png";
+import csgo from "../assets/GG_CSGO_Icon.png";
+import league from "../assets/GG_League_of_Legends_Icon.png";
+import souls from "../assets/GG_Dark_Souls_Icon.png";
+import gow from "../assets/GG_God_of_War_Icon.png";
 
 
 export default function Main() {
 
   return (
     <Grid container
-    spacing={2}
+    spacing={0}
     justifyContent="center"
     alignItems="center">
-        <Grid item>
-            <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color:'#D9DCD6'}}> LOGO </Typography>
+        <Grid item sx={{mt: 4, mb: 4}}>
+            <img className="main-logo" src={logo} alt='logo' width='200' height='200'/> 
         </Grid>
         <Grid container
-        spacing={2}
+        spacing={0}
         direction='column'
         justifyContent="center"
         alignItems="center"
         >
             <Grid item>
-                <Typography variant ='h2' sx={{color:'#D9DCD6', mt: 5}}>Gavlans Game</Typography>
+                <Typography variant ='h2' sx={{color:'#D9DCD6'}}>Gavlans Game</Typography>
             </Grid>
             <Grid item>
                 <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24}}>Play trivia games from the biggest collections</Typography>
             </Grid>
-            <Grid item>
+        </Grid>
               <Grid container
-              spacing={4}
+              spacing={2}
               direction="row"
               justifyContent="center"
               alignItems="center">
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
-                </Grid>
-                <Grid item>
+                <Grid item sx={{ml: -40}}>
                   <NavLink to='/start' state="csgo">
                     <Tooltip title="CSGO" placement='top' arrow>
-                      <img className='img' src={test} alt='csgo' width='100' height='100'/>  
+                      <img className='img' src={csgo} alt='csgo' width='150' height='150'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
-                <Grid item>
+                <Grid item sx={{ml: 45}}>
                   <NavLink to='/start' state="league">
                     <Tooltip title='LEAGUE' placement='top' arrow>
-                      <img className='img' src={test} alt='league' width='100' height='100'/>  
+                      <img className='img' src={league} alt='league' width='150' height='150'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
-                </Grid>
               </Grid>
-            </Grid>
-            <Grid item>
             <Grid container
-              spacing={4}
+              spacing={2}
               direction="row"
               justifyContent="center"
               alignItems="center"
               >
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
+                <Grid item sx={{mr: 55}}>
+                <NavLink to='/start' state="souls">
+                    <Tooltip title='DARK SOULS' placement='top' arrow>
+                      <img src={souls} alt='souls' width='150' height='150'/>  
+                    </Tooltip>
+                  </NavLink>
                 </Grid>
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
-                </Grid>
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
-                </Grid>
-                <Grid item>
-                  <img src={test} alt='test' width='100' height='100'/>
+                <Grid item sx={{mr: -35}}>
+                    <NavLink to='/start' state="gow">
+                    <Tooltip title='GOD OF WAR' placement='top' arrow>
+                      <img src={gow} alt='gow' width='150' height='150'/>  
+                    </Tooltip>
+                  </NavLink>
                 </Grid>
               </Grid>
-            </Grid>
-        </Grid>
         <Footer className="footer"/>
     </Grid>
   )

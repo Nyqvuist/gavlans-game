@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import '../styles/border.css';
 import Footer from './Footer';
+import logo from "../assets/Gavlans_Game_Logo_v2.png";
 
 export default function Start() {
     
@@ -20,9 +21,9 @@ export default function Start() {
     spacing={0}
     justifyContent="center"
     alignItems="center">
-        <Grid item>
+        <Grid item sx={{mt:4, mb: 4}}>
             <Link href="/" style={{textDecoration: 'none'}}>
-                <Typography variant='h3' sx={{fontWeight:'bold', mt:10, pb:2, color: "#D9DCD6"}}> LOGO </Typography>
+                <img className="main-logo" src={logo} alt='logo' width='200' height='200'/> 
             </Link>   
         </Grid>
         <Grid container
@@ -38,7 +39,7 @@ export default function Start() {
             direction='row'
             justifyContent="space-around"
             alignItems="center"
-            sx={{mt: 15}}>
+            sx={{mt: 5}}>
                 <Grid item>
                     <Grid container
                     direction='column'
