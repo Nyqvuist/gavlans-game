@@ -17,7 +17,7 @@ export default function Header({game}) {
               <img src={logo} alt='logo' width='150' height='150'/> 
             </Grid>
             <Grid item >
-              <Typography className='title' sx={{fontFamily: 'Cinzel', mx: 88}}>{game}</Typography>
+              <Typography className='title' sx={{fontFamily: 'Cinzel', mx: 87}}>{game}</Typography>
             </Grid>
     </Grid>
   )
