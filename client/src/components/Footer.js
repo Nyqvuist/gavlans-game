@@ -12,7 +12,8 @@ export default function Footer() {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          sx={{mt: 5}}>
+          sx={{mt: 5}}
+          className="footer">
             <Grid item sx={{mr: 72}}>
               <img src={logo} alt='logo' width='70' height='70'/> 
             </Grid>

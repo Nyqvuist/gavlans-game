@@ -10,6 +10,7 @@ import csgo from "../assets/GG_CSGO_Icon.png";
 import league from "../assets/GG_League_of_Legends_Icon.png";
 import souls from "../assets/GG_Dark_Souls_Icon.png";
 import gow from "../assets/GG_God_of_War_Icon.png";
+import "../styles/footer.css"
 
 
 export default function Main() {

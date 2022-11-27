@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import '../styles/border.css';
 import Footer from './Footer';
 import logo from "../assets/Gavlans_Game_Logo_v2.png";
+import "../styles/footer.css";
 
 export default function Start() {
     

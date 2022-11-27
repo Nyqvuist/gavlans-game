@@ -3,13 +3,13 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { Grid, Typography, Button } from '@mui/material';
-import CircularProgress from '@mui/material/CircularProgress';
 import Score from '../components/Score';
 import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
 import '../styles/play.css';
 import "animate.css";
 import Header from "./Header";
+import logo from "../assets/Gavlans_Game_Logo_v2.png";
 
 
 let trackArray = []
@@ -135,7 +135,7 @@ export default function Play() {
       
     if(isBusy){
       return (
-        <CircularProgress />
+        <img className="loading" src={logo} alt='logo' width='200' height='200'/> 
       )
     }
    return (
