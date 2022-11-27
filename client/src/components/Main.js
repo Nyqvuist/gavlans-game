@@ -36,7 +36,7 @@ export default function Main() {
             </Grid>
         </Grid>
               <Grid container
-              spacing={2}
+              spacing={8}
               direction="row"
               justifyContent="center"
               alignItems="center">
