@@ -40,38 +40,31 @@ export default function Main() {
               direction="row"
               justifyContent="center"
               alignItems="center">
-                <Grid item sx={{ml: -40}}>
+                <Grid item >
                   <NavLink to='/start' state="csgo">
                     <Tooltip title="CSGO" placement='top' arrow>
-                      <img className='img' src={csgo} alt='csgo' width='150' height='150'/>  
+                      <img className='img' src={csgo} alt='csgo' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
-                <Grid item sx={{ml: 45}}>
+                <Grid item >
                   <NavLink to='/start' state="league">
                     <Tooltip title='LEAGUE' placement='top' arrow>
-                      <img className='img' src={league} alt='league' width='150' height='150'/>  
+                      <img className='img' src={league} alt='league' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
-              </Grid>
-            <Grid container
-              spacing={2}
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              >
-                <Grid item sx={{mr: 55}}>
-                <NavLink to='/start' state="souls">
-                    <Tooltip title='DARK SOULS' placement='top' arrow>
-                      <img src={souls} alt='souls' width='150' height='150'/>  
-                    </Tooltip>
-                  </NavLink>
-                </Grid>
-                <Grid item sx={{mr: -35}}>
-                    <NavLink to='/start' state="gow">
+                <Grid item>
+                  <NavLink to='/start' state="gow">
                     <Tooltip title='GOD OF WAR' placement='top' arrow>
-                      <img src={gow} alt='gow' width='150' height='150'/>  
+                      <img src={gow} alt='gow' width='200' height='200'/>  
+                    </Tooltip>
+                  </NavLink>
+                </Grid>
+                <Grid item>
+                  <NavLink to='/start' state="souls">
+                    <Tooltip title='DARK SOULS' placement='top' arrow>
+                      <img src={souls} alt='souls' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
