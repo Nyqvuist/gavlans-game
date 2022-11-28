@@ -33,8 +33,8 @@ export default function Main() {
                 <Typography variant ='h2' sx={{color:'#D9DCD6'}}>Gavlan's Game</Typography>
             </Grid>
             <Grid item>
-                <Typography variant='subtitle1' sx={{color:'#D9DCD6', fontSize: 18}}>The harshest speed trivia game.</Typography>
-                <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 18, textAlign: 'center'}}>Gavlan Wheel? Gavlan Deal.</Typography>
+                <Typography variant='subtitle1' sx={{color:'#D9DCD6', fontSize: 24}}>The harshest speed trivia game.</Typography>
+                <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24, textAlign: 'center'}}>Gavlan Wheel? Gavlan Deal.</Typography>
             </Grid>
         </Grid>
               <Grid container
