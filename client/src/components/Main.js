@@ -34,7 +34,7 @@ export default function Main() {
             </Grid>
             <Grid item>
                 <Typography variant='subtitle1' sx={{color:'#D9DCD6', fontSize: 24}}>Are you ready for Gavlan's Game?</Typography>
-                <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24, textAlign: 'center'}}>Gavlan Wheel! Gavlan Deal!</Typography>
+                <Typography variant='subtitle1' sx={{pb:10, color:'#D9DCD6', fontSize: 24, textAlign: 'center'}}>Gavlan Wheel? Gavlan Deal.</Typography>
             </Grid>
         </Grid>
               <Grid container
