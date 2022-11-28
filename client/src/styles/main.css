@@ -18,3 +18,7 @@ html {
 .img-csgo {
   transform: scaleX(-1);
 }
+
+.tooltip-h1.tooltip-h1 {
+  font-size: 14px;
+}

@@ -7,7 +7,8 @@
 }
 
 .header-logo {
-    object-position: left top;
+    grid-row: 1;
+    justify-content: center;
 }
 
 .question.question {
@@ -56,4 +57,13 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  .header-title.header-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #D9DCD6;
+    font-size: 54px;
+    text-align: center;
+    grid-row: 1;
   }

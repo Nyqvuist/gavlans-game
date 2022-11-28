@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/main.css';
-import { Grid } from '@mui/material';
+import { Grid, Zoom } from '@mui/material';
 import { Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import Tooltip from '@mui/material/Tooltip';
@@ -11,6 +11,7 @@ import league from "../assets/GG_League_of_Legends_Icon.png";
 import souls from "../assets/GG_Dark_Souls_Icon.png";
 import gow from "../assets/GG_God_of_War_Icon.png";
 import "../styles/footer.css"
+import "../styles/Tooltip.css"
 
 
 export default function Main() {
@@ -44,28 +45,28 @@ export default function Main() {
               alignItems="center">
                 <Grid item >
                   <NavLink to='/start' state="csgo">
-                    <Tooltip title="CSGO" placement='top' arrow>
+                    <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>
                       <img className='img-csgo' src={csgo} alt='csgo' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item >
                   <NavLink to='/start' state="league">
-                    <Tooltip title='LEAGUE' placement='top' arrow>
+                    <Tooltip title={<h1 className='tooltip-h1'>LEAGUE</h1>} TransitionComponent={Zoom} placement='top'>
                       <img className='img' src={league} alt='league' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="gow">
-                    <Tooltip title='GOD OF WAR' placement='top' arrow>
+                    <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} TransitionComponent={Zoom} placement='top'>
                       <img src={gow} alt='gow' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="souls">
-                    <Tooltip title='DARK SOULS' placement='top' arrow>
+                    <Tooltip title={<h1 className='tooltip-h1'>DARK SOULS</h1>} TransitionComponent={Zoom} placement='top'>
                       <img src={souls} alt='souls' width='200' height='200'/>  
                     </Tooltip>
                   </NavLink>
