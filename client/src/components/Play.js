@@ -9,7 +9,7 @@ import { useTimer } from 'use-timer';
 import '../styles/play.css';
 import "animate.css";
 import Header from "./Header";
-import logo from "../assets/Gavlans_Game_Logo_v2.png";
+import loading from "../assets/Gavlans_Game_Logo_Front_v2.png"
 
 
 let trackArray = []
@@ -59,7 +59,7 @@ export default function Play() {
     useEffect(() => {
       setIsBusy(true)
         const fetchData = async () => {
-            const result = await axios.get(`https://gavlans-game-backend.web.app/${location.state}`)
+            const result = await axios.get(`https://gavlans-game-backend.web.app//${location.state}`)
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
@@ -135,7 +135,9 @@ export default function Play() {
       
     if(isBusy){
       return (
-        <img className="loading" src={logo} alt='logo' width='200' height='200'/> 
+        <div className='loading'>
+          <img className="animation" src={loading} alt='logo' width='200' height='200'/>
+        </div>
       )
     }
    return (

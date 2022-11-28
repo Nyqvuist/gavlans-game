@@ -47,8 +47,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: spin 2s linear infinite;
-    animation-fill-mode: forwards;
+}
+
+.animation {
+    animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
