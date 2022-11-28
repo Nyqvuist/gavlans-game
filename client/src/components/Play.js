@@ -59,7 +59,7 @@ export default function Play() {
     useEffect(() => {
       setIsBusy(true)
         const fetchData = async () => {
-            const result = await axios.get(`https://gavlans-game-backend.web.app//${location.state}`)
+            const result = await axios.get(`https://gavlans-game-backend.web.app/${location.state}`)
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
