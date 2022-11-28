@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Divider, Grid } from '@mui/material';
 import { Typography } from '@mui/material';
-import logo from "../assets/Gavlans_Game_Logo_v2.png";
+import logo from "../assets/Hassan_Lion_Logo_Alt.png";
 
 
 export default function Footer() {
