@@ -10,8 +10,8 @@ import csgo from "../assets/GG_CSGO_Icon.png";
 import league from "../assets/GG_League_of_Legends_Icon.png";
 import souls from "../assets/GG_Dark_Souls_Icon.png";
 import gow from "../assets/GG_God_of_War_Icon.png";
-import "../styles/footer.css"
-import "../styles/Tooltip.css"
+import "../styles/footer.css";
+import "../styles/Tooltip.css";
 
 
 export default function Main() {
@@ -57,10 +57,10 @@ export default function Main() {
                     </Tooltip>
                   </NavLink>
                 </Grid>
-                <Grid item>
+                <Grid item className='container'>
                   <NavLink to='/start' state="gow">
                     <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} TransitionComponent={Zoom} placement='top'>
-                      <img src={gow} alt='gow' width='200' height='200'/>  
+                      <img src={gow} alt='gow' width='200' height='200'/>
                     </Tooltip>
                   </NavLink>
                 </Grid>

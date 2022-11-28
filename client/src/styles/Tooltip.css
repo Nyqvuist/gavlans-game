@@ -1,3 +1,4 @@
-.MuiTooltip-tooltip {
+.MuiTooltip-tooltip.MuiTooltip-tooltip {
     background-color: #B88846;
+    opacity: 0.8;
 }
