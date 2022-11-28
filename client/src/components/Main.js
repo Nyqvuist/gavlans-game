@@ -46,28 +46,30 @@ export default function Main() {
                 <Grid item >
                   <NavLink to='/start' state="csgo">
                     <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>
-                      <img className='img-csgo' src={csgo} alt='csgo' width='200' height='200'/>  
+                      <div className="img">
+                        <img className='img-csgo' src={csgo} alt='csgo'/>  
+                      </div>
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item >
                   <NavLink to='/start' state="league">
                     <Tooltip title={<h1 className='tooltip-h1'>LEAGUE</h1>} TransitionComponent={Zoom} placement='top'>
-                      <img className='img' src={league} alt='league' width='200' height='200'/>  
+                      <img className='img' src={league} alt='league'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item className='container'>
                   <NavLink to='/start' state="gow">
                     <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} TransitionComponent={Zoom} placement='top'>
-                      <img src={gow} alt='gow' width='200' height='200'/>
+                      <img className='img' src={gow} alt='gow'/>
                     </Tooltip>
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="souls">
                     <Tooltip title={<h1 className='tooltip-h1'>DARK SOULS</h1>} TransitionComponent={Zoom} placement='top'>
-                      <img src={souls} alt='souls' width='200' height='200'/>  
+                      <img className='img' src={souls} alt='souls'/>  
                     </Tooltip>
                   </NavLink>
                 </Grid>
