@@ -51,10 +51,10 @@ export default function Start() {
                         <Grid item>
                             <Paper className='fancy-border'>
                                 <Typography className="info-header">Quick Info</Typography>
-                                <Typography className="info-1" >• You will have 10 seconds to answer each question.</Typography>
-                                <Typography className="info-2" >• The faster you answer the more points you will get.</Typography>
-                                <Typography className="info-2" >• You will not know which questions you get wrong.</Typography>
-                                <Typography className="info-2" >• Dont suck!</Typography>
+                                <Typography className="info-1" >• You have 10 seconds to answer each question.</Typography>
+                                <Typography className="info-2" >• The faster you answer, the more points you will earn.</Typography>
+                                <Typography className="info-2" >• You will not know the results of your answers.</Typography>
+                                <Typography className="info-2" >• Don't suck!</Typography>
                             </Paper>
                         </Grid>
                     </Grid>

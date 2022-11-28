@@ -30,7 +30,7 @@ export default function Main() {
         alignItems="center"
         >
             <Grid item>
-                <Typography variant ='h2' sx={{color:'#D9DCD6'}}>Gavlans Game</Typography>
+                <Typography variant ='h2' sx={{color:'#D9DCD6'}}>Gavlan's Game</Typography>
             </Grid>
             <Grid item>
                 <Typography variant='subtitle1' sx={{color:'#D9DCD6', fontSize: 24}}>Are you ready for Gavlan's Game?</Typography>
