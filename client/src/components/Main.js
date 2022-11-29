@@ -43,7 +43,7 @@ export default function Main() {
               direction="row"
               justifyContent="center"
               alignItems="center"
-              sx={{mb: 17}}>
+              sx={{mb: 16}}>
                 <Grid item >
                   <NavLink to='/start' state="csgo">
                     <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>

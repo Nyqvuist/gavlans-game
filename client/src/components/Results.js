@@ -1,4 +1,4 @@
-import { Button, Divider, Grid, Paper, Typography } from '@mui/material';
+import { Button, Divider, Grid, Paper, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../styles/results.css';
@@ -7,6 +7,8 @@ import Header from "./Header";
 
 
 export default function Results() {
+
+    const results = useMediaQuery('(max-width: 578px)')
 
     const location = useLocation()
     const array = location.state.array[0]
@@ -30,9 +32,29 @@ export default function Results() {
                 <Typography className='summary-title'>Results Summary</Typography>
                 <Grid container
                 rowSpacing={0}
+                justifyContent="center"
+                alignItems={"center"}
                 direction="row">
                     <Grid item>
-                        <Grid container
+                        {results ? (
+                            <Grid container
+                            spacing={0}
+                            justifyContent="center"
+                            alignItems="center"
+                            direction="column">
+                                <Grid item sx={{mr:1,mb:1}}>
+                                    <Typography className="item-titles">Questions</Typography>
+                                    <Divider variant='middle'/>
+                                </Grid>
+                                {array.map((item, index) => (
+                                    <Grid item
+                                    key={index}>
+                                        <Typography className="item-map" > Question #{item.Index}</Typography>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        ) : (
+                            <Grid container
                         spacing={1}
                         justifyContent="flex-start"
                         alignItems={"flex-start"}
@@ -47,11 +69,29 @@ export default function Results() {
                                     <Typography className="item-map" > Question #{item.Index}</Typography>
                                 </Grid>
                             ))}
-
                         </Grid>
+                        )}
                     </Grid>
                     <Grid item>
-                    <Grid container
+                    {results ? (
+                        <Grid container
+                        spacing={0}
+                        justifyContent="center"
+                        alignItems="center"
+                        direction="column">
+                            <Grid item sx={{mb: 1}}>
+                                <Typography className="item-titles">Time Completed</Typography>
+                                <Divider variant='middle'/>
+                            </Grid>
+                            {array.map((item, index) => (
+                                <Grid item
+                                key={index}>
+                                    <Typography className="item-map">{item.Time} Seconds</Typography>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    ) : (
+                        <Grid container
                         spacing={1}
                         justifyContent="flex-end"
                         alignItems={"flex-end"}
@@ -67,6 +107,7 @@ export default function Results() {
                                 </Grid>
                             ))}
                         </Grid>
+                    )}
                     </Grid>
                 </Grid>
             </Paper>

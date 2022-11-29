@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Typography, Button, useMediaQuery } from '@mui/material';
 import Score from '../components/Score';
 import ProgressBar from "../components/progressTimer";
 import { useTimer } from 'use-timer';
@@ -15,6 +15,8 @@ import loading from "../assets/Gavlans_Game_Logo_Front_v2.png"
 let trackArray = []
 
 export default function Play() {
+
+  const choices = useMediaQuery('(max-width:731px)')
 
   const { time, start, pause, reset } = useTimer({
     endTime: 10,
@@ -212,12 +214,13 @@ export default function Play() {
                                 </Grid>
                               </Grid>
                               <Grid item>
-                              <Grid container
+                              {choices ? (
+                                <Grid container
                                 direction="column"
                                 alignItems={"center"}
                                 justifyContent="space-evenly"
                                 spacing={4}
-                                sx={{ml: -1}}>
+                                >
                                   <Grid item>
                                     <Button
                                     variant='contained'
@@ -235,6 +238,32 @@ export default function Play() {
                                       >{shuffles?.[3]}</Button>
                                   </Grid>
                                 </Grid>
+                              ) : (
+                                <Grid container
+                                direction="column"
+                                alignItems={"center"}
+                                justifyContent="space-evenly"
+                                spacing={4}
+                                sx={{ml: -1}}
+                                >
+                                  <Grid item>
+                                    <Button
+                                    variant='contained'
+                                    key={index}
+                                    className="animate__animated animate__fadeInUp"
+                                      onClick={() => jobDone(shuffles[2])}
+                                    >{shuffles?.[2]}</Button>
+                                  </Grid>
+                                  <Grid item>
+                                    <Button
+                                      variant='contained'
+                                      key={index}
+                                      className="animate__animated animate__fadeInUp"
+                                        onClick={() => jobDone(shuffles[3])}
+                                      >{shuffles?.[3]}</Button>
+                                  </Grid>
+                                </Grid>
+                              )}
                               </Grid>
                             </Grid>
                         </Grid>

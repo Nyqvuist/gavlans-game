@@ -54,16 +54,19 @@
     animation: spin 4s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  .header-title.header-title {
+.header-title.header-title {
     font-weight: bold;
     text-transform: uppercase;
     color: #D9DCD6;
     font-size: 54px;
     text-align: center;
     grid-row: 1;
-  }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
