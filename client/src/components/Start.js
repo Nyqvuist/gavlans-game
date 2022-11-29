@@ -40,7 +40,7 @@ export default function Start() {
             direction='row'
             justifyContent="space-around"
             alignItems="center"
-            sx={{mt: 5}}>
+            sx={{mt: 5, mb: 12.5}}>
                 <Grid item>
                     <Grid container
                     direction='column'

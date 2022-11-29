@@ -42,7 +42,8 @@ export default function Main() {
               spacing={8}
               direction="row"
               justifyContent="center"
-              alignItems="center">
+              alignItems="center"
+              sx={{mb: 17}}>
                 <Grid item >
                   <NavLink to='/start' state="csgo">
                     <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>
@@ -74,7 +75,7 @@ export default function Main() {
                   </NavLink>
                 </Grid>
               </Grid>
-        <Footer className="footer"/>
+      <Footer className="footer"/>
     </Grid>
   )
 }
