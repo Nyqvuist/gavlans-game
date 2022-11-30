@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/main.css';
-import { Grid, Zoom } from '@mui/material';
+import { Grid, useMediaQuery, Zoom } from '@mui/material';
 import { Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import Tooltip from '@mui/material/Tooltip';
@@ -15,6 +15,10 @@ import "../styles/Tooltip.css";
 
 
 export default function Main() {
+
+  const [open, setOpen] = useState(true)
+
+  const tooltips = useMediaQuery('(max-width: 479px)')
 
   return (
     <Grid container
@@ -46,32 +50,59 @@ export default function Main() {
               sx={{mb: 16}}>
                 <Grid item >
                   <NavLink to='/start' state="csgo">
+                  {tooltips ? (
+                    <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} open={open} placement='top'>
+                    <div className="img">
+                      <img className='img-csgo' src={csgo} alt='csgo'/>  
+                    </div>
+                  </Tooltip>
+                  ) : (
                     <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>
                       <div className="img">
                         <img className='img-csgo' src={csgo} alt='csgo'/>  
                       </div>
                     </Tooltip>
+                  )}
                   </NavLink>
                 </Grid>
                 <Grid item >
                   <NavLink to='/start' state="league">
+                    {tooltips ? (
+                      <Tooltip title={<h1 className='tooltip-h1'>LEAGUE</h1>} open={open} placement='top'>
+                      <img className='img' src={league} alt='league'/>  
+                    </Tooltip>
+                  ) : (
                     <Tooltip title={<h1 className='tooltip-h1'>LEAGUE</h1>} TransitionComponent={Zoom} placement='top'>
                       <img className='img' src={league} alt='league'/>  
                     </Tooltip>
+                  )}
                   </NavLink>
                 </Grid>
                 <Grid item className='container'>
                   <NavLink to='/start' state="gow">
+                    {tooltips ? (
+                      <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} open={open} placement='top'>
+                      <img className='img' src={gow} alt='gow'/>
+                    </Tooltip>
+                  ) : (
                     <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} TransitionComponent={Zoom} placement='top'>
                       <img className='img' src={gow} alt='gow'/>
                     </Tooltip>
+                  )}
                   </NavLink>
                 </Grid>
                 <Grid item>
                   <NavLink to='/start' state="souls">
+                    {tooltips ? (
+                      <Tooltip title={<h1 className='tooltip-h1'>DARK SOULS</h1>} open={open} placement='top'>
+                        <img className='img' src={souls} alt='souls'/>  
+                      </Tooltip>
+
+                  ) : (
                     <Tooltip title={<h1 className='tooltip-h1'>DARK SOULS</h1>} TransitionComponent={Zoom} placement='top'>
                       <img className='img' src={souls} alt='souls'/>  
                     </Tooltip>
+                  )}
                   </NavLink>
                 </Grid>
               </Grid>
