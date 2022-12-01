@@ -49,15 +49,15 @@ export default function Main() {
               alignItems="center"
               sx={{mb: 16}}>
                 <Grid item >
-                  <NavLink to='/start' state="csgo">
+                  <NavLink to='/start' state="cs:go">
                   {tooltips ? (
-                    <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} open={open} placement='top'>
+                    <Tooltip title={<h1 className='tooltip-h1'>CS:GO</h1>} open={open} placement='top'>
                     <div className="img">
-                      <img className='img-csgo' src={csgo} alt='csgo'/>  
+                      <img className='img-csgo' src={csgo} alt='cs:go'/>  
                     </div>
                   </Tooltip>
                   ) : (
-                    <Tooltip title={<h1 className='tooltip-h1'>CSGO</h1>} TransitionComponent={Zoom} placement='top'>
+                    <Tooltip title={<h1 className='tooltip-h1'>CS:GO</h1>} TransitionComponent={Zoom} placement='top'>
                       <div className="img">
                         <img className='img-csgo' src={csgo} alt='csgo'/>  
                       </div>

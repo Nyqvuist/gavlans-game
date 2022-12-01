@@ -6,8 +6,8 @@ const cors = require('cors');
 
 app.use(cors())
 
-const quesRoute = require("./routes/csgo");
-app.use("/csgo", quesRoute);
+const quesRoute = require("./routes/cs:go");
+app.use("/cs:go", quesRoute);
 
 const leagueRoute = require("./routes/league")
 app.use("/league", leagueRoute);
