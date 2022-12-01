@@ -18,7 +18,7 @@ app.use(cors())
 app.use(express.json())
 
 const quesRoute = require("./routes/csgo");
-app.use("/csgo", quesRoute);
+app.use("/cs:go", quesRoute);
 
 const leagueRoute = require("./routes/league")
 app.use("/league", leagueRoute);
