@@ -164,3 +164,263 @@
 [debug] [2022-12-01T00:25:00.129Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
 [debug] [2022-12-01T00:25:00.273Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
 [debug] [2022-12-01T00:25:00.274Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:25:10.284Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:25:10.284Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:25:10.419Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:25:10.420Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:25:20.430Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:25:20.430Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:25:20.588Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:25:20.589Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:25:30.599Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:25:30.599Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:25:30.735Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:25:30.735Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:25:40.746Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:25:40.746Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:25:40.896Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:25:40.896Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:25:50.907Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:25:50.907Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:25:51.102Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:25:51.102Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:26:01.113Z] [update-default-us-central1-app] Retrying task index 0
+[debug] [2022-12-01T00:26:01.113Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj [none]
+[debug] [2022-12-01T00:26:01.298Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj 200
+[debug] [2022-12-01T00:26:01.298Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj {"name":"operations/Z2F2bGFucy1nYW1lLWJhY2tlbmQvdXMtY2VudHJhbDEvYXBwL29KYml1NVh1dUxj","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/gavlans-game-backend/locations/us-central1/functions/app","type":"UPDATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","updateTime":"2022-11-25T19:24:29.232Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/d19e025f-d913-4a78-8d7b-874b6ea4a61d.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856083&Signature=Fij2%2FqQ5YeloTZOgELf9pgo2qtUtpmVF%2BhVbduZZ%2FLl06IAXqP2bq4hHSX%2Bo6zkxYze31akfjFWlBon3CLRqcekcQIKtZZ%2BeyfHbqfweguajp5CqhY1Yof1IQq8aYYDFdHWX6o0OkwYs4aOyhYWDck8vw5Re4IlBLqKluetHrLTl8pIvXRhG2KdupOmioqp9kIxtajrhRyG%2B%2FAMBJ7zIDgb%2Bel0CuAvq6lXpw4nZMiQm6haKX%2B%2FcWHNJusb7JT8Gls8DUi0GhycyjEep%2BNlilGgNS87Wyhe1jmOwDBX%2BXKTgApq0fJ7%2FH6nNmFf1w6SFFGJ9w0fx5nV42MSpf28osg%3D%3D","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"4","updateTime":"2022-12-01T00:24:44Z","buildId":"5a723028-ec56-479f-8f8c-8c6cbaa7e75e","sourceToken":"b1251990-a425-4ef2-b5cb-a7d6f773fcd0","buildName":"projects/523937257580/locations/us-central1/builds/5a723028-ec56-479f-8f8c-8c6cbaa7e75e"}}
+[debug] [2022-12-01T00:26:01.298Z] Got source token b1251990-a425-4ef2-b5cb-a7d6f773fcd0 for region us-central1
+[debug] [2022-12-01T00:26:15.253Z] ----------------------------------------------------------------------
+[debug] [2022-12-01T00:26:15.254Z] Command:       /home/hassanshirazi/.nvm/versions/node/v16.6.2/bin/node /home/hassanshirazi/.nvm/versions/node/v16.6.2/bin/firebase deploy
+[debug] [2022-12-01T00:26:15.254Z] CLI Version:   11.16.1
+[debug] [2022-12-01T00:26:15.255Z] Platform:      linux
+[debug] [2022-12-01T00:26:15.255Z] Node Version:  v16.6.2
+[debug] [2022-12-01T00:26:15.255Z] Time:          Wed Nov 30 2022 19:26:15 GMT-0500 (Eastern Standard Time)
+[debug] [2022-12-01T00:26:15.255Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-01T00:26:15.314Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-01T00:26:15.314Z] > authorizing via signed-in user (shiraziahassan@gmail.com)
+[debug] [2022-12-01T00:26:15.314Z] [iam] checking project gavlans-game-backend for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-01T00:26:15.316Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gavlans-game-backend:testIamPermissions [none]
+[debug] [2022-12-01T00:26:15.316Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gavlans-game-backend:testIamPermissions x-goog-quota-user=projects/gavlans-game-backend
+[debug] [2022-12-01T00:26:15.316Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gavlans-game-backend:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-01T00:26:15.493Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gavlans-game-backend:testIamPermissions 200
+[debug] [2022-12-01T00:26:15.493Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gavlans-game-backend:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-01T00:26:15.494Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/gavlans-game-backend/serviceAccounts/gavlans-game-backend@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-12-01T00:26:15.494Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/gavlans-game-backend/serviceAccounts/gavlans-game-backend@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-01T00:26:15.588Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/gavlans-game-backend/serviceAccounts/gavlans-game-backend@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-12-01T00:26:15.588Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/gavlans-game-backend/serviceAccounts/gavlans-game-backend@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-01T00:26:15.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend [none]
+[debug] [2022-12-01T00:26:15.792Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend 200
+[debug] [2022-12-01T00:26:15.792Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend {"projectId":"gavlans-game-backend","projectNumber":"523937257580","displayName":"gavlans-game-backend","name":"projects/gavlans-game-backend","resources":{"hostingSite":"gavlans-game-backend"},"state":"ACTIVE","etag":"1_851415b9-27fd-433f-9082-6cacc2a0a21a"}
+[info] 
+[info] === Deploying to 'gavlans-game-backend'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-12-01T00:26:15.794Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend [none]
+[debug] [2022-12-01T00:26:16.070Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend 200
+[debug] [2022-12-01T00:26:16.070Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend {"projectId":"gavlans-game-backend","projectNumber":"523937257580","displayName":"gavlans-game-backend","name":"projects/gavlans-game-backend","resources":{"hostingSite":"gavlans-game-backend"},"state":"ACTIVE","etag":"1_851415b9-27fd-433f-9082-6cacc2a0a21a"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-12-01T00:26:16.072Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-12-01T00:26:16.072Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/gavlans-game-backend
+[debug] [2022-12-01T00:26:16.072Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-12-01T00:26:16.072Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/gavlans-game-backend
+[debug] [2022-12-01T00:26:16.073Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudbuild.googleapis.com [none]
+[debug] [2022-12-01T00:26:16.073Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudbuild.googleapis.com x-goog-quota-user=projects/gavlans-game-backend
+[debug] [2022-12-01T00:26:16.073Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/artifactregistry.googleapis.com [none]
+[debug] [2022-12-01T00:26:16.074Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/artifactregistry.googleapis.com x-goog-quota-user=projects/gavlans-game-backend
+[debug] [2022-12-01T00:26:16.397Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/runtimeconfig.googleapis.com 200
+[debug] [2022-12-01T00:26:16.397Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-12-01T00:26:16.418Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/artifactregistry.googleapis.com 200
+[debug] [2022-12-01T00:26:16.418Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-12-01T00:26:16.420Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudbuild.googleapis.com 200
+[debug] [2022-12-01T00:26:16.420Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-12-01T00:26:16.424Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudfunctions.googleapis.com 200
+[debug] [2022-12-01T00:26:16.424Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/gavlans-game-backend/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-12-01T00:26:16.425Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend/adminSdkConfig [none]
+[debug] [2022-12-01T00:26:16.714Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend/adminSdkConfig 200
+[debug] [2022-12-01T00:26:16.714Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend/adminSdkConfig {"projectId":"gavlans-game-backend","storageBucket":"gavlans-game-backend.appspot.com"}
+[debug] [2022-12-01T00:26:16.715Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/gavlans-game-backend/configs [none]
+[debug] [2022-12-01T00:26:16.833Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/gavlans-game-backend/configs 200
+[debug] [2022-12-01T00:26:16.833Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/gavlans-game-backend/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-12-01T00:26:16.834Z] Validating nodejs source
+[debug] [2022-12-01T00:26:17.782Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0",
+    "mongoose": "^6.7.3",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-01T00:26:17.782Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-12-01T00:26:17.784Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-01T00:26:17.867Z] Serving at port 9005
+
+[debug] [2022-12-01T00:26:18.212Z] server is online
+
+[debug] [2022-12-01T00:26:18.215Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-01T00:26:18.219Z] shutdown requested via /__/quitquitquit
+
+[debug] [2022-12-01T00:26:18.482Z] Database is connected.
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /home/hassanshirazi/gavlans-game/server/functions (216.9 KB) for uploading 
+[debug] [2022-12-01T00:26:28.295Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/-/functions [none]
+[debug] [2022-12-01T00:26:28.892Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/-/functions 200
+[debug] [2022-12-01T00:26:28.892Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/-/functions {"functions":[{"name":"projects/gavlans-game-backend/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-gavlans-game-backend.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"DEPLOY_IN_PROGRESS","entryPoint":"app","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"gavlans-game-backend@appspot.gserviceaccount.com","updateTime":"2022-12-01T00:26:13.672Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"f7c7ac73d061b041aeb2fe886b0b53d48087529f"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/7bb9d02d-9e33-4b76-a832-d645cf4bda58.zip","environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"runtime":"nodejs16","ingressSettings":"ALLOW_ALL","buildId":"2fcacd4d-0413-4c44-909e-242609c8efb2","buildName":"projects/523937257580/locations/us-central1/builds/2fcacd4d-0413-4c44-909e-242609c8efb2","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2022-12-01T00:26:28.893Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/gavlans-game-backend/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2022-12-01T00:26:29.415Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/gavlans-game-backend/locations/-/functions 200
+[debug] [2022-12-01T00:26:29.415Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/gavlans-game-backend/locations/-/functions {}
+[debug] [2022-12-01T00:26:29.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend [none]
+[debug] [2022-12-01T00:26:29.671Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend 200
+[debug] [2022-12-01T00:26:29.672Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gavlans-game-backend {"projectId":"gavlans-game-backend","projectNumber":"523937257580","displayName":"gavlans-game-backend","name":"projects/gavlans-game-backend","resources":{"hostingSite":"gavlans-game-backend"},"state":"ACTIVE","etag":"1_851415b9-27fd-433f-9082-6cacc2a0a21a"}
+[debug] [2022-12-01T00:26:29.674Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gavlans-game-backend/versions [none]
+[debug] [2022-12-01T00:26:29.674Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gavlans-game-backend/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-01T00:26:30.243Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gavlans-game-backend/versions 200
+[debug] [2022-12-01T00:26:30.243Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gavlans-game-backend/versions {"name":"projects/523937257580/sites/gavlans-game-backend/versions/133404da585d9e41","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-01T00:26:30.244Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-12-01T00:26:30.244Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-12-01T00:26:30.702Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-12-01T00:26:30.702Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856191&Signature=T5imXUr3%2BhHRQgC2%2Fvqb%2BSestmMVjQnyAol0wKQ%2FMYxDs4OC%2F1%2BIDMV9%2F3JA%2FIzRp7CB8%2FELYI%2BEpKBMYivVAAPpqm5rUfIAIllLmhnrveH9JLNv1%2FCfheWp2EOB%2Fv4Kawa5ptA2J%2FlgbFxeNvDqFuFv3iJJGSG3pZqnowmJcX4t6NIOQB0tciicihU%2FaaYuKRjhRNzpDfEo1j3qt%2FXGhPCaREw7HRoAy88YiGy1l0T4panSnEm00dVL%2FzPna0IdbceADFweLyNj4BC6QGh2mYKT5Rfw5iOla68NLKSFrDfHmgCBswgaT%2Fg%2FsRL8gS38e55jhXvOPaKDdqdaSEUkaA%3D%3D"}
+[debug] [2022-12-01T00:26:30.702Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip GoogleAccessId=service-523937257580%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856191&Signature=T5imXUr3%2BhHRQgC2%2Fvqb%2BSestmMVjQnyAol0wKQ%2FMYxDs4OC%2F1%2BIDMV9%2F3JA%2FIzRp7CB8%2FELYI%2BEpKBMYivVAAPpqm5rUfIAIllLmhnrveH9JLNv1%2FCfheWp2EOB%2Fv4Kawa5ptA2J%2FlgbFxeNvDqFuFv3iJJGSG3pZqnowmJcX4t6NIOQB0tciicihU%2FaaYuKRjhRNzpDfEo1j3qt%2FXGhPCaREw7HRoAy88YiGy1l0T4panSnEm00dVL%2FzPna0IdbceADFweLyNj4BC6QGh2mYKT5Rfw5iOla68NLKSFrDfHmgCBswgaT%2Fg%2FsRL8gS38e55jhXvOPaKDdqdaSEUkaA%3D%3D
+[debug] [2022-12-01T00:26:30.703Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip [stream]
+[debug] [2022-12-01T00:26:30.927Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip 200
+[debug] [2022-12-01T00:26:30.927Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[gavlans-game-backend]: beginning deploy... 
+[info] i  hosting[gavlans-game-backend]: found 2 files in public 
+[debug] [2022-12-01T00:26:30.931Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-01T00:26:30.936Z] [hosting] hash cache [cHVibGlj] stored for 2 files
+[debug] [2022-12-01T00:26:30.936Z] [hosting][hash queue][FINAL] {"max":0,"min":0,"avg":0,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":2}
+[debug] [2022-12-01T00:26:30.937Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/523937257580/sites/gavlans-game-backend/versions/133404da585d9e41:populateFiles [none]
+[debug] [2022-12-01T00:26:30.937Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/523937257580/sites/gavlans-game-backend/versions/133404da585d9e41:populateFiles {"files":{"/404.html":"b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537","/index.html":"6719e299c2e0ca2dd6cf42a0a310603621872a5027c3f07d403ee07c8ab30719"}}
+[debug] [2022-12-01T00:26:31.314Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/523937257580/sites/gavlans-game-backend/versions/133404da585d9e41:populateFiles 200
+[debug] [2022-12-01T00:26:31.314Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/523937257580/sites/gavlans-game-backend/versions/133404da585d9e41:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/gavlans-game-backend/versions/133404da585d9e41/files"}
+[debug] [2022-12-01T00:26:31.314Z] [hosting][populate queue][FINAL] {"max":379,"min":379,"avg":379,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":379}
+[debug] [2022-12-01T00:26:31.314Z] [hosting] uploads queued: 0
+[debug] [2022-12-01T00:26:31.314Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1669854391314}
+[info] ✔  hosting[gavlans-game-backend]: file upload complete 
+[debug] [2022-12-01T00:26:31.315Z] [hosting] deploy completed after 386ms
+[info] i  functions: updating Node.js 16 function app(us-central1)... 
+[debug] [2022-12-01T00:26:31.319Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions/app updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CminInstances%2CmaxInstances%2CingressSettings%2CenvironmentVariables%2CserviceAccountEmail%2CavailableMemoryMb%2Ctimeout%2CvpcConnector%2CvpcConnectorEgressSettings%2CsourceToken
+[debug] [2022-12-01T00:26:31.319Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions/app {"name":"projects/gavlans-game-backend/locations/us-central1/functions/app","sourceUploadUrl":"https://storage.googleapis.com/uploads-94671116212.us-central1.cloudfunctions.appspot.com/99a33f40-6cbf-4657-84f7-5ceaff1343ed.zip?GoogleAccessId=service-523937257580@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669856191&Signature=T5imXUr3%2BhHRQgC2%2Fvqb%2BSestmMVjQnyAol0wKQ%2FMYxDs4OC%2F1%2BIDMV9%2F3JA%2FIzRp7CB8%2FELYI%2BEpKBMYivVAAPpqm5rUfIAIllLmhnrveH9JLNv1%2FCfheWp2EOB%2Fv4Kawa5ptA2J%2FlgbFxeNvDqFuFv3iJJGSG3pZqnowmJcX4t6NIOQB0tciicihU%2FaaYuKRjhRNzpDfEo1j3qt%2FXGhPCaREw7HRoAy88YiGy1l0T4panSnEm00dVL%2FzPna0IdbceADFweLyNj4BC6QGh2mYKT5Rfw5iOla68NLKSFrDfHmgCBswgaT%2Fg%2FsRL8gS38e55jhXvOPaKDdqdaSEUkaA%3D%3D","entryPoint":"app","runtime":"nodejs16","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7c417f9734f51660fcbe3f4acb28152a06bf2645"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"MONGO":"mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority","FIREBASE_CONFIG":"{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}","GCLOUD_PROJECT":"gavlans-game-backend","EVENTARC_CLOUD_EVENT_SOURCE":"projects/gavlans-game-backend/locations/us-central1/functions/app"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null}
+[debug] [2022-12-01T00:26:31.680Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions/app 400
+[debug] [2022-12-01T00:26:31.680Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/gavlans-game-backend/locations/us-central1/functions/app {"error":{"code":400,"message":"An operation on function app in region us-central1 in project gavlans-game-backend is already in progress. Please try again later.","status":"FAILED_PRECONDITION"}}
+[warn] ⚠  functions: failed to update function projects/gavlans-game-backend/locations/us-central1/functions/app 
+[error] Failed to update function projects/gavlans-game-backend/locations/us-central1/functions/app
+[debug] [2022-12-01T00:26:31.684Z] Total Function Deployment time: 363
+[debug] [2022-12-01T00:26:31.684Z] 1 Functions Deployed
+[debug] [2022-12-01T00:26:31.685Z] 1 Functions Errored
+[debug] [2022-12-01T00:26:31.685Z] 0 Function Deployments Aborted
+[debug] [2022-12-01T00:26:31.685Z] Average Function Deployment time: 363
+[info] 
+[info] Functions deploy had errors with the following functions:
+	app(us-central1)
+[debug] [2022-12-01T00:26:31.753Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2022-12-01T00:26:31.754Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/repositories/gcf-artifacts/packages/app [none]
+[debug] [2022-12-01T00:26:31.755Z] >>> [apiv2][query] GET https://us.gcr.io/v2/gavlans-game-backend/gcf/us-central1/tags/list [none]
+[debug] [2022-12-01T00:26:31.881Z] <<< [apiv2][status] GET https://us.gcr.io/v2/gavlans-game-backend/gcf/us-central1/tags/list 200
+[debug] [2022-12-01T00:26:31.881Z] <<< [apiv2][body] GET https://us.gcr.io/v2/gavlans-game-backend/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"gavlans-game-backend/gcf/us-central1","tags":[]}
+[debug] [2022-12-01T00:26:31.882Z] Could not find image for function projects/gavlans-game-backend/locations/us-central1/functions/app
+[debug] [2022-12-01T00:26:31.995Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/repositories/gcf-artifacts/packages/app 200
+[debug] [2022-12-01T00:26:31.995Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/repositories/gcf-artifacts/packages/app {"name":"projects/gavlans-game-backend/locations/us-central1/operations/9fb23acb-e9b9-4860-9b6a-57097bd7c6c3","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"}}
+[debug] [2022-12-01T00:26:31.996Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/operations/9fb23acb-e9b9-4860-9b6a-57097bd7c6c3 [none]
+[debug] [2022-12-01T00:26:32.221Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/operations/9fb23acb-e9b9-4860-9b6a-57097bd7c6c3 200
+[debug] [2022-12-01T00:26:32.221Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1beta2/projects/gavlans-game-backend/locations/us-central1/operations/9fb23acb-e9b9-4860-9b6a-57097bd7c6c3 {"name":"projects/gavlans-game-backend/locations/us-central1/operations/9fb23acb-e9b9-4860-9b6a-57097bd7c6c3","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.protobuf.Empty"}}
+[debug] [2022-12-01T00:26:32.221Z] Functions deploy failed.
+[debug] [2022-12-01T00:26:32.221Z] {
+  "endpoint": {
+    "id": "app",
+    "project": "gavlans-game-backend",
+    "region": "us-central1",
+    "entryPoint": "app",
+    "platform": "gcfv1",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "MONGO": "mongodb+srv://Nyqvuist:omeed101@cluster0.n72pb.mongodb.net/discord-csgo?retryWrites=true&w=majority",
+      "FIREBASE_CONFIG": "{\"projectId\":\"gavlans-game-backend\",\"storageBucket\":\"gavlans-game-backend.appspot.com\"}",
+      "GCLOUD_PROJECT": "gavlans-game-backend",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/gavlans-game-backend/locations/us-central1/functions/app"
+    },
+    "codebase": "default",
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "7c417f9734f51660fcbe3f4acb28152a06bf2645",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/gavlans-game-backend/locations/us-central1/functions/app"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/gavlans-game-backend/locations/us-central1/functions/app",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "An operation on function app in region us-central1 in project gavlans-game-backend is already in progress. Please try again later.",
+            "status": "FAILED_PRECONDITION"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, An operation on function app in region us-central1 in project gavlans-game-backend is already in progress. Please try again later.",
+      "status": 400
+    },
+    "status": 500
+  }
+}
+[debug] [2022-12-01T00:26:32.266Z] Error: Failed to update function app in region us-central1
+    at /home/hassanshirazi/.nvm/versions/node/v16.6.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:41:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.updateV1Function (/home/hassanshirazi/.nvm/versions/node/v16.6.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:304:32)
+    at async Fabricator.updateEndpoint (/home/hassanshirazi/.nvm/versions/node/v16.6.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:140:13)
+    at async handle (/home/hassanshirazi/.nvm/versions/node/v16.6.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:78:17)
+[error] 
+[error] Error: There was an error deploying functions
