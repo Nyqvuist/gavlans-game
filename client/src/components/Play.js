@@ -61,7 +61,7 @@ export default function Play() {
     useEffect(() => {
       setIsBusy(true)
         const fetchData = async () => {
-            const result = await axios.get(`https://gavlans-game-backend.web.app/${location.state}`)
+            const result = await axios.get(`https://gavlans-game-backend.web.app/${location.state.game}`)
             const jsonResult = result.data
             setQuestion(jsonResult)
             setIsBusy(false)
@@ -97,7 +97,6 @@ export default function Play() {
       let answer = question[index]?.answer
       setAnswer(answer)
       let ques = question[index]?.question
-      console.log("shuffle" + ques)
       setQues(ques)
       choices?.push(question[index].answer)
       let shuffles = choices?.sort(() => 0.5 - Math.random())
@@ -145,10 +144,10 @@ export default function Play() {
    return (
       <>
           {showScore ? (
-            <Score score={score} open={open} setOpen={setOpen} game={location.state} array={trackArray}/>
+            <Score score={score} open={open} setOpen={setOpen} game={location.state.title} array={trackArray}/>
           ) : (
             <>
-            <Header game={location.state}/>
+            <Header game={location.state.title}/>
             <Grid container
             spacing={0}
             justifyContent="center"

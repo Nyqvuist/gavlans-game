@@ -47,7 +47,7 @@ export default function Singleplayer() {
                             <PersonIcon/>
                         </Grid>
                         <Grid item sx={{mt: 4}}>
-                            <NavLink to="/play" state={location.state} style={{textDecoration: 'none'}}>
+                            <NavLink to="/play" state={{game: [location.state.game], title: [location.state.title]}} style={{textDecoration: 'none'}}>
                                 <Button variant='contained' sx={{width:90, height:40, textTransform: 'uppercase', textDecoration:'none', backgroundColor: "#4A5E82", fontSize: 16, letterSpacing: 1}}>
                                     Play!
                                 </Button>

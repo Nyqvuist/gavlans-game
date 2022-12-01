@@ -49,7 +49,7 @@ export default function Main() {
               alignItems="center"
               sx={{mb: 16}}>
                 <Grid item >
-                  <NavLink to='/start' state="csgo">
+                  <NavLink to='/start' state={{game:['csgo'], title: ["cs:go"]}}>
                   {tooltips ? (
                     <Tooltip title={<h1 className='tooltip-h1'>CS:GO</h1>} open={open} placement='top'>
                     <div className="img">
@@ -66,7 +66,7 @@ export default function Main() {
                   </NavLink>
                 </Grid>
                 <Grid item >
-                  <NavLink to='/start' state="league">
+                  <NavLink to='/start' state={{game:['league'], title: ["league of legends"]}}>
                     {tooltips ? (
                       <Tooltip title={<h1 className='tooltip-h1'>LEAGUE</h1>} open={open} placement='top'>
                       <img className='img' src={league} alt='league'/>  
@@ -79,7 +79,7 @@ export default function Main() {
                   </NavLink>
                 </Grid>
                 <Grid item className='container'>
-                  <NavLink to='/start' state="gow">
+                  <NavLink to='/start' state={{game:['gow'], title: ["god of war"]}}>
                     {tooltips ? (
                       <Tooltip title={<h1 className='tooltip-h1'>GOD OF WAR</h1>} open={open} placement='top'>
                       <img className='img' src={gow} alt='gow'/>
@@ -92,7 +92,7 @@ export default function Main() {
                   </NavLink>
                 </Grid>
                 <Grid item>
-                  <NavLink to='/start' state="souls">
+                  <NavLink to='/start' state={{game:['souls'], title: ["dark souls"]}}>
                     {tooltips ? (
                       <Tooltip title={<h1 className='tooltip-h1'>DARK SOULS</h1>} open={open} placement='top'>
                         <img className='img' src={souls} alt='souls'/>  
