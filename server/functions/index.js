@@ -23,6 +23,9 @@ app.use("/csgo", quesRoute);
 const leagueRoute = require("./routes/league")
 app.use("/league", leagueRoute);
 
+const gowRoute = require("./routes/gow")
+app.use("/gow", gowRoute);
+
 app.listen(3001, () => {
     console.log("server is online")
 })
