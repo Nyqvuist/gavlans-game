@@ -1,5 +1,5 @@
-html { 
-  background: url('../assets/brick-wall-3.jpg') no-repeat center center fixed;
+html {
+  background: url("../assets/brick-wall-3.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,18 +8,18 @@ html {
 
 .img:hover {
   transform: scale(1.2);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .img {
-  width: 200px;
-  height: 200px;
-  transition: transform .2s;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.2s;
 }
 
 .img-csgo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   transform: scaleX(-1);
 }
 
