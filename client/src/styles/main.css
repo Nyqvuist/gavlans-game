@@ -5,24 +5,3 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
-.img:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.img {
-  width: 150px;
-  height: 150px;
-  transition: transform 0.2s;
-}
-
-.img-csgo {
-  width: 150px;
-  height: 150px;
-  transform: scaleX(-1);
-}
-
-.tooltip-h1.tooltip-h1 {
-  font-size: 14px;
-}

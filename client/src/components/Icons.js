@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/main.css";
-import { Grid, useMediaQuery, Zoom } from "@mui/material";
+import "../styles/icons.css";
+import { Grid, Typography, useMediaQuery, Zoom } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 import csgo from "../assets/GG_CSGO_Icon.png";
@@ -11,8 +11,8 @@ import football from "../assets/Gavlans_Game_Football_Icon.png";
 import basketball from "../assets/Gavlans_Game_Basketball_Icon_v2.png";
 import hockey from "../assets/Gavlans_Game_Hockey_Icon.png";
 import soccer from "../assets/Gavlans_Game_Soccer_Icon.png";
-import "../styles/footer.css";
 import "../styles/Tooltip.css";
+import { Box } from "@mui/system";
 
 export default function Icons() {
   const [open, setOpen] = useState(true);
@@ -31,29 +31,40 @@ export default function Icons() {
         sx={{ mb: 2 }}
       >
         <Grid item>
-          <NavLink to="/start" state={{ game: ["csgo"], title: ["cs:go"] }}>
+          <>
             {tooltips ? (
-              <Tooltip
-                title={<h1 className="tooltip-h1">CS:GO</h1>}
-                open={open}
-                placement="top"
-              >
-                <div className="img">
-                  <img className="img-csgo" src={csgo} alt="csgo" />
+              <>
+                <div className="container-box">
+                  <Box className="icons-box">
+                    <Typography className="text-box">CS:GO</Typography>
+                  </Box>
                 </div>
-              </Tooltip>
+                <NavLink
+                  to="/start"
+                  state={{ game: ["csgo"], title: ["cs:go"] }}
+                >
+                  <div className="img">
+                    <img className="img-csgo" src={csgo} alt="csgo" />
+                  </div>
+                </NavLink>
+              </>
             ) : (
               <Tooltip
                 title={<h1 className="tooltip-h1">CS:GO</h1>}
                 TransitionComponent={Zoom}
                 placement="top"
               >
-                <div className="img">
-                  <img className="img-csgo" src={csgo} alt="csgo" />
-                </div>
+                <NavLink
+                  to="/start"
+                  state={{ game: ["csgo"], title: ["cs:go"] }}
+                >
+                  <div className="img">
+                    <img className="img-csgo" src={csgo} alt="csgo" />
+                  </div>
+                </NavLink>
               </Tooltip>
             )}
-          </NavLink>
+          </>
         </Grid>
         <Grid item>
           <NavLink

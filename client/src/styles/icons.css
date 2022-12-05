@@ -1,0 +1,44 @@
+.img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.2s;
+}
+
+.img-csgo {
+  width: 150px;
+  height: 150px;
+  transform: scaleX(-1);
+}
+
+.tooltip-h1.tooltip-h1 {
+  font-size: 14px;
+}
+
+.container-box.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons-box.icons-box {
+  background-color: #b88846;
+  height: fit-content;
+  width: fit-content;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 5px;
+}
+
+.text-box.text-box {
+  text-align: center;
+  font-size: 14;
+  font-weight: bold;
+  color: #d9dcd6;
+}
