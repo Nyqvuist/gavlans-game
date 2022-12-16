@@ -151,12 +151,13 @@ export default function Play() {
           score={score}
           open={open}
           setOpen={setOpen}
-          game={location.state.title}
+          game={location.state.game}
+          title={location.state.title}
           array={trackArray}
         />
       ) : (
         <>
-          <Header game={location.state.title} />
+          <Header title={location.state.title} />
           <Grid
             container
             spacing={0}
