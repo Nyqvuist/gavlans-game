@@ -44,7 +44,7 @@ export default function Start() {
           direction="row"
           justifyContent="space-around"
           alignItems="center"
-          sx={{ mt: 5, mb: 11.5 }}
+          sx={{ mt: 5, mb: 15.5 }}
         >
           <Grid item>
             <Grid

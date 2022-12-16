@@ -1,72 +1,73 @@
 .title.title {
-    margin-top: 80px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #D9DCD6;
-    font-size: 54px;
+  margin-top: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d9dcd6;
+  font-size: 54px;
 }
 
 .header-logo {
-    grid-row: 1;
-    justify-content: center;
+  grid-row: 1;
+  justify-content: center;
 }
 
 .question.question {
-    text-align: center ;
-    font-weight: 600;
-    color: #D9DCD6;
-    margin-top: 64px;
-    margin-bottom: 40px;
-    font-size: 36px;
+  text-align: center;
+  font-weight: 600;
+  color: #d9dcd6;
+  margin-top: 64px;
+  margin-bottom: 40px;
+  font-size: 36px;
 }
 
 .animate__animated.animate__fadeInUp.animate__animated.animate__fadeInUp {
-    background-color: #59709b;
-    font-size: 20px;
-    height: 55px;
-    width: 350px;
-    color: #D9DCD6;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 7px;
-    overflow: hidden;
+  background-color: #59709b;
+  font-size: 20px;
+  height: 55px;
+  width: 350px;
+  color: #d9dcd6;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  overflow: hidden;
 }
 
 .animate__animated.animate__fadeInUp.animate__animated.animate__fadeInUp:hover {
-    background-color: #334669;
+  background-color: #334669;
 }
 
 .animate__animated.animate__flash {
-    -o-animation-delay: 8s;
-    animation-delay: 8s;
-    animation-duration: 2s;
-    -o-animation-duration: 2s;
+  -o-animation-delay: 8s;
+  animation-delay: 8s;
+  animation-duration: 2s;
+  -o-animation-duration: 2s;
 }
 
 .loading.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .animation {
-    animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 .header-title.header-title {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #D9DCD6;
-    font-size: 54px;
-    text-align: center;
-    grid-row: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d9dcd6;
+  font-size: 54px;
+  text-align: center;
+  grid-row: 1;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-
-

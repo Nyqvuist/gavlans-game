@@ -143,7 +143,7 @@ export default function Icons() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ mb: 10 }}
+        sx={{ mb: 5 }}
       >
         <Grid item>
           <NavLink
