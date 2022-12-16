@@ -9,4 +9,8 @@ const basketballSchema = new mongoose.Schema(
   { collection: "quiz-basketball" }
 );
 
-module.exports = mongoose.model("Basketball", basketballSchema, "quiz-csgo");
+module.exports = mongoose.model(
+  "Basketball",
+  basketballSchema,
+  "quiz-basketball"
+);

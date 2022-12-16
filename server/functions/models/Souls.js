@@ -9,4 +9,4 @@ const soulsSchema = new mongoose.Schema(
   { collection: "quiz-souls" }
 );
 
-module.exports = mongoose.model("Souls", soulsSchema, "quiz-csgo");
+module.exports = mongoose.model("Souls", soulsSchema, "quiz-souls");

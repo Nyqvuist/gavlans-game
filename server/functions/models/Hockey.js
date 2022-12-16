@@ -9,4 +9,4 @@ const hockeySchema = new mongoose.Schema(
   { collection: "quiz-hockey" }
 );
 
-module.exports = mongoose.model("Hockey", hockeySchema, "quiz-csgo");
+module.exports = mongoose.model("Hockey", hockeySchema, "quiz-hockey");
