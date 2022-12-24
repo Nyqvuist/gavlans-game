@@ -10,48 +10,55 @@ import Icons from "./Icons";
 
 export default function Main() {
   return (
-    <Grid container spacing={0} justifyContent="center" alignItems="center">
-      <Grid item sx={{ mt: 2, mb: 2 }}>
-        <img
-          className="main-logo"
-          src={logo}
-          alt="logo"
-          width="200"
-          height="200"
-        />
-      </Grid>
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid item>
-          <Typography
-            variant="h2"
-            sx={{ color: "#D9DCD6", textAlign: "center" }}
-          >
-            Gavlan's Game
-          </Typography>
+    <>
+      <Grid container spacing={0} justifyContent="center" alignItems="center">
+        <Grid item sx={{ mt: 2, mb: 2 }}>
+          <img
+            className="main-logo"
+            src={logo}
+            alt="logo"
+            width="200"
+            height="200"
+          />
         </Grid>
-        <Grid item>
-          <Typography
-            variant="subtitle1"
-            sx={{ color: "#D9DCD6", fontSize: 24, textAlign: "center" }}
-          >
-            The harshest speed trivia game.
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            sx={{ pb: 10, color: "#D9DCD6", fontSize: 24, textAlign: "center" }}
-          >
-            Gavlan Wheel? Gavlan Deal.
-          </Typography>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item>
+            <Typography
+              variant="h2"
+              sx={{ color: "#D9DCD6", textAlign: "center" }}
+            >
+              Gavlan's Game
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#D9DCD6", fontSize: 24, textAlign: "center" }}
+            >
+              The harshest speed trivia game.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                pb: 10,
+                color: "#D9DCD6",
+                fontSize: 24,
+                textAlign: "center",
+              }}
+            >
+              Gavlan Wheel? Gavlan Deal.
+            </Typography>
+          </Grid>
         </Grid>
+        <Icons />
+        <Footer className="footer" />
       </Grid>
-      <Icons />
-      <Footer className="footer" />
-    </Grid>
+    </>
   );
 }
