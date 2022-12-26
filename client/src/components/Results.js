@@ -150,7 +150,10 @@ export default function Results() {
           <NavLink
             to="/play"
             style={{ textDecoration: "none" }}
-            state={{ game: [location.state.game[0][0]] }}
+            state={{
+              game: [location.state.game[0][0]],
+              title: [location.state.title],
+            }}
           >
             <Button
               className="play-again-button"

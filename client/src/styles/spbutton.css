@@ -1,35 +1,7 @@
-.game-over.game-over {
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  color: #b88846;
-  margin-bottom: -15px;
-}
-
-.random-line.random-line {
-  text-align: center;
-  margin-bottom: 16px;
-  font-weight: bold;
-  color: #39352b;
-  font-size: 24px;
-}
-
-.point.point {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: #39352b;
-}
-
-.next-button.next-button {
+.play.play {
   align-self: center;
   background-image: none;
   background-color: #4a5e82;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  margin-top: 15px;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
@@ -40,9 +12,10 @@
   box-sizing: border-box;
   border-color: #b88846;
   cursor: pointer;
-  font-size: 20px;
+  height: 40px;
+  width: 90px;
+  font-size: 16px;
   letter-spacing: 1px;
-  font-weight: 600;
   line-height: 23px;
   outline: none;
   padding: 0.75rem;
@@ -57,13 +30,10 @@
   touch-action: manipulation;
 }
 
-.next-button.next-button:hover {
+.play.play:hover {
   background-color: #334669;
 }
 
-.your-score.your-score {
-  text-align: center;
-  font-size: 24px;
-  color: #39352b;
-  margin-top: 24px;
+.play.play:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
