@@ -38,7 +38,28 @@
 
 .text-box.text-box {
   text-align: center;
-  font-size: 14;
   font-weight: bold;
   color: #d9dcd6;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@media (max-width: 390px) {
+  .img.img {
+    width: 100px;
+    height: 100px;
+  }
+  .img-csgo.img-csgo {
+    width: 100px;
+    height: 100px;
+  }
+  .text-box.text-box {
+    font-size: 12px;
+  }
+  .icons-box.icons-box {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
