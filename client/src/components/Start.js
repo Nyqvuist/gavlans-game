@@ -67,7 +67,7 @@ export default function Start() {
                   <Typography className="info-2">
                     • You will not know the results of your answers.
                   </Typography>
-                  <Typography className="info-2">• Don't suck!</Typography>
+                  <Typography className="info-2">• Answer quickly!</Typography>
                 </Paper>
               </Grid>
             </Grid>

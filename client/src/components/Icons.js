@@ -15,7 +15,7 @@ import "../styles/Tooltip.css";
 import { Box } from "@mui/system";
 
 export default function Icons() {
-  const tooltips = useMediaQuery("(max-width: 479px)");
+  const tooltips = useMediaQuery("(max-width: 820px)");
 
   return (
     <>
@@ -29,40 +29,32 @@ export default function Icons() {
         sx={{ mb: 8 }}
       >
         <Grid item>
-          <>
-            {tooltips ? (
-              <>
-                <div className="container-box">
-                  <Box className="icons-box" sx={{ mb: 1 }}>
-                    <Typography className="text-box">CS:GO</Typography>
-                  </Box>
+          {tooltips ? (
+            <>
+              <div className="container-box">
+                <Box className="icons-box" sx={{ mb: 1 }}>
+                  <Typography className="text-box">CS:GO</Typography>
+                </Box>
+              </div>
+              <NavLink to="/start" state={{ game: ["csgo"], title: ["cs:go"] }}>
+                <div className="img">
+                  <img className="img-csgo" src={csgo} alt="csgo" />
                 </div>
-                <NavLink
-                  to="/start"
-                  state={{ game: ["csgo"], title: ["cs:go"] }}
-                >
-                  <div className="img">
-                    <img className="img-csgo" src={csgo} alt="csgo" />
-                  </div>
-                </NavLink>
-              </>
-            ) : (
-              <Tooltip
-                title={<h1 className="tooltip-h1">CS:GO</h1>}
-                TransitionComponent={Zoom}
-                placement="top"
-              >
-                <NavLink
-                  to="/start"
-                  state={{ game: ["csgo"], title: ["cs:go"] }}
-                >
-                  <div className="img">
-                    <img className="img-csgo" src={csgo} alt="csgo" />
-                  </div>
-                </NavLink>
-              </Tooltip>
-            )}
-          </>
+              </NavLink>
+            </>
+          ) : (
+            <Tooltip
+              title={<h1 className="tooltip-h1">CS:GO</h1>}
+              TransitionComponent={Zoom}
+              placement="bottom"
+            >
+              <NavLink to="/start" state={{ game: ["csgo"], title: ["cs:go"] }}>
+                <div className="img">
+                  <img className="img-csgo" src={csgo} alt="csgo" />
+                </div>
+              </NavLink>
+            </Tooltip>
+          )}
         </Grid>
         <Grid item>
           {tooltips ? (
@@ -83,7 +75,7 @@ export default function Icons() {
             <Tooltip
               title={<h1 className="tooltip-h1">LEAGUE</h1>}
               TransitionComponent={Zoom}
-              placement="top"
+              placement="bottom"
             >
               <NavLink
                 to="/start"
@@ -113,7 +105,7 @@ export default function Icons() {
             <Tooltip
               title={<h1 className="tooltip-h1">GOD OF WAR</h1>}
               TransitionComponent={Zoom}
-              placement="top"
+              placement="bottom"
             >
               <NavLink
                 to="/start"
@@ -143,7 +135,7 @@ export default function Icons() {
             <Tooltip
               title={<h1 className="tooltip-h1">DARK SOULS</h1>}
               TransitionComponent={Zoom}
-              placement="top"
+              placement="bottom"
             >
               <NavLink
                 to="/start"

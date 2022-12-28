@@ -39,20 +39,14 @@ export default function Main() {
           <Grid item>
             <Typography
               variant="subtitle1"
-              sx={{ color: "#D9DCD6", fontSize: 24, textAlign: "center" }}
-            >
-              The harshest speed trivia game.
-            </Typography>
-            <Typography
-              variant="subtitle1"
               sx={{
-                pb: 10,
+                pb: 8,
                 color: "#D9DCD6",
                 fontSize: 24,
                 textAlign: "center",
               }}
             >
-              Gavlan Wheel? Gavlan Deal.
+              The best speed trivia game.
             </Typography>
           </Grid>
         </Grid>
