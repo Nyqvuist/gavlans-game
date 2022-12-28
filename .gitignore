@@ -6,3 +6,7 @@ server/localhost.crt
 server/localhost.key
 server/functions/firebase-debug.log
 server/.firebase/hosting.cHVibGlj.cache
+client/.firebaserc
+client/firebase.json
+.gitignore
+client/.firebase/hosting.YnVpbGQ.cache
